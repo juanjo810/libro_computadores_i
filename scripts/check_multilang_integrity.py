@@ -92,6 +92,9 @@ def toc_entries(toc: dict[str, Any]) -> list[tuple[str, str]]:
         for index, section in enumerate(item.get("sections", []) or []):
             walk(section, f"{position}/s{index}")
 
+    # jb-book admite 'chapters' en el nivel superior o dentro de 'parts'.
+    for chapter_index, chapter in enumerate(toc.get("chapters", []) or []):
+        walk(chapter, f"c{chapter_index}")
     for part_index, part in enumerate(toc.get("parts", []) or []):
         for chapter_index, chapter in enumerate(part.get("chapters", []) or []):
             walk(chapter, f"p{part_index}/c{chapter_index}")
@@ -99,10 +102,15 @@ def toc_entries(toc: dict[str, Any]) -> list[tuple[str, str]]:
 
 
 def toc_shape(toc: dict[str, Any]) -> list[list[int]]:
-    return [
-        [len(chapter.get("sections", []) or []) for chapter in part.get("chapters", []) or []]
-        for part in toc.get("parts", []) or []
-    ]
+    def chapter_shape(chapters: Any) -> list[int]:
+        return [len(chapter.get("sections", []) or []) for chapter in chapters or []]
+
+    shape = []
+    if toc.get("chapters"):
+        shape.append(chapter_shape(toc.get("chapters")))
+    for part in toc.get("parts", []) or []:
+        shape.append(chapter_shape(part.get("chapters")))
+    return shape
 
 
 def content_files(language: str) -> set[str]:

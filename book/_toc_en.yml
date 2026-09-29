@@ -2,9 +2,9 @@ format: jb-book
 root: en/01_verilog/session_00_ubuntu_terminal
 chapters:
   - file: en/01_verilog/session_01_introduction
+  - file: en/01_verilog/session_02_operations
 # Content temporarily hidden.
 # - file: en/intro
-# - file: en/01_verilog/session_02_operations
 # - file: en/01_verilog/session_03_logic_gates
 # - file: en/01_verilog/session_04_modules
 # - file: en/01_verilog/session_05_routers_and_adders

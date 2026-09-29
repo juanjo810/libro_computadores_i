@@ -305,28 +305,6 @@ Responde a estas preguntas **primero a mano** y después compruébalo con un pro
 3. Expresa en octal el número `1234`.
 4. Pasa a hexadecimal el número binario `1010011`.
 
-````{admonition} Pista: esqueleto del programa
-:class: dropdown
-
-Declara una variable `integer`, asígnale la constante en la base de partida e imprímela con el código de formato de la base de destino.
-
-```verilog
-module ej_1_1;
-
-  integer n;
-
-  initial
-  begin
-    n = 'h1FEA;
-    $display("0x1FEA en decimal vale %d", n);
-  end
-
-endmodule
-```
-
-Repite el mismo patrón cambiando el prefijo de la constante (`'b`, `'o`, `'h`) y el código de formato (`%d`, `%o`, `%h`).
-````
-
 (registros)=
 ## Registros
 
@@ -361,14 +339,6 @@ Después, responde primero a mano y luego con Verilog:
 2. Escribe en hexadecimal, binario y decimal el número mayor y el más pequeño que se pueden almacenar en un registro de 16 bits **sin signo**.
 3. ¿Qué expresión tiene en binario el número `6789` cuando se representa en complemento a dos en un registro de 16 bits?
 4. Expresa el `-22` en un registro de ocho bits y pásalo a uno de 16 bits **extendiendo el signo**.
-
-```{admonition} Pista: qué mirar en la salida
-:class: dropdown
-
-- En `m = -1`, un registro con signo de 64 bits a `-1` tiene todos sus bits a uno. Imprimido en hexadecimal son 16 efes.
-- En `busA[7:4] = 4'hC`, solo cambian cuatro bits; el resto del registro mantiene el valor anterior.
-- Para el apartado 4, declara `reg signed [7:0] corto;` y `reg signed [15:0] largo;`. Al asignar `largo = corto;` con ambos registros `signed`, Verilog extiende el signo automáticamente. Compara el resultado en binario con lo que habías calculado a mano.
-```
 
 ## Operadores aritméticos
 
@@ -423,14 +393,6 @@ Hay una regla que conviene conocer: si asignamos a un registro un valor con **me
 Define un registro de 16 bits cuyos cuatro bits más significativos sean ceros, los cuatro siguientes unos, los cuatro siguientes `x` y los cuatro últimos `z`.
 
 Imprime en binario el valor del registro. Después realiza operaciones aritméticas con él (una suma, una multiplicación) e imprime el resultado.
-
-```{admonition} Pista: qué esperar
-:class: dropdown
-
-La asignación es directa: `r = 16'b0000_1111_xxxx_zzzz;`
-
-Al operar aritméticamente con un valor que contiene `x` o `z`, el simulador **no puede saber** el resultado: normalmente todo el resultado sale como `x`. Esa es exactamente la lección del ejercicio: un solo bit indefinido contamina el cálculo entero. Por eso, en los diseños reales, inicializar los registros no es una manía sino una necesidad.
-```
 
 ## Órdenes de la terminal relacionadas
 

@@ -305,28 +305,6 @@ Answer these questions **by hand first**, then check them with a Verilog program
 3. Express the number `1234` in octal.
 4. Convert the binary number `1010011` to hexadecimal.
 
-````{admonition} Hint: program skeleton
-:class: dropdown
-
-Declare an `integer` variable, assign it the constant in the source base, and print it with the format code of the target base.
-
-```verilog
-module ej_1_1;
-
-  integer n;
-
-  initial
-  begin
-    n = 'h1FEA;
-    $display("0x1FEA in decimal is %d", n);
-  end
-
-endmodule
-```
-
-Repeat the same pattern, changing the constant prefix (`'b`, `'o`, `'h`) and the format code (`%d`, `%o`, `%h`).
-````
-
 (registers)=
 ## Registers
 
@@ -361,14 +339,6 @@ Then answer, first by hand and then with Verilog:
 2. Write, in hexadecimal, binary, and decimal, the largest and the smallest number that can be stored in a 16-bit **unsigned** register.
 3. What is the binary expression of the number `6789` when represented in two's complement in a 16-bit register?
 4. Express `-22` in an eight-bit register and move it into a 16-bit one **extending the sign**.
-
-```{admonition} Hint: what to look for in the output
-:class: dropdown
-
-- In `m = -1`, a 64-bit signed register set to `-1` has all its bits at one. Printed in hexadecimal it is sixteen F characters.
-- In `busA[7:4] = 4'hC` only four bits change; the rest of the register keeps its previous value.
-- For part 4, declare `reg signed [7:0] short_r;` and `reg signed [15:0] long_r;`. Assigning `long_r = short_r;` with both registers `signed` makes Verilog extend the sign automatically. Compare the binary result with what you worked out by hand.
-```
 
 ## Arithmetic operators
 
@@ -423,14 +393,6 @@ One rule is worth knowing: if we assign a register a value with **fewer bits** t
 Define a 16-bit register whose four most significant bits are zeros, the next four ones, the next four `x`, and the last four `z`.
 
 Print the register value in binary. Then perform arithmetic operations with it (an addition, a multiplication) and print the result.
-
-```{admonition} Hint: what to expect
-:class: dropdown
-
-The assignment is direct: `r = 16'b0000_1111_xxxx_zzzz;`
-
-When operating arithmetically on a value containing `x` or `z`, the simulator **cannot know** the result: usually the whole result comes out as `x`. That is exactly the lesson of the exercise: a single undefined bit contaminates the entire computation. This is why, in real designs, initialising registers is a necessity rather than a habit.
-```
 
 ## Related terminal commands
 
