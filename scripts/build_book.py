@@ -243,8 +243,17 @@ def generate_languages_json(languages, output_static_dir=None):
     for lang in languages:
         if lang == "default":
             continue
+        try:
+            lang_root = toc_root_for_language(lang)
+        except Exception:
+            # Sin _toc_<lang>.yml legible, mantenemos el destino historico.
+            lang_root = f"{lang}/intro.html"
         lang_data.append(
-            {"code": lang, "name": LANG_DISPLAY_NAMES.get(lang, lang.upper())}
+            {
+                "code": lang,
+                "name": LANG_DISPLAY_NAMES.get(lang, lang.upper()),
+                "root": lang_root,
+            }
         )
 
     # Target directory: either source or specified build dir
@@ -292,14 +301,22 @@ def toc_referenced_entries(project_dir):
     entries = {toc["root"]} if "root" in toc else set()
 
     def walk(item):
+        if not isinstance(item, dict):
+            return
         if "file" in item:
             entries.add(item["file"])
         for section in item.get("sections", []) or []:
             walk(section)
-
-    for part in toc.get("parts", []) or []:
-        for chapter in part.get("chapters", []) or []:
+        for chapter in item.get("chapters", []) or []:
             walk(chapter)
+
+    # jb-book admite 'parts' o 'chapters' en el nivel superior.
+    for part in toc.get("parts", []) or []:
+        walk(part)
+    for chapter in toc.get("chapters", []) or []:
+        walk(chapter)
+    for section in toc.get("sections", []) or []:
+        walk(section)
     return entries
 
 

@@ -1,92 +1,77 @@
-# Sesion 1. Introduccion a Verilog
+# Sesión 1. Introducción a Verilog
 
-Esta pagina respeta la secuencia de la sesion original: cada apartado aparece en el mismo orden y los ejercicios se mantienen como secciones propias dentro del recorrido.
+En la sesión 0 aprendimos a movernos por la terminal. Ahora empezamos a escribir Verilog: crearemos nuestro primer programa, lo compilaremos, lo ejecutaremos y usaremos `$display` para ver por pantalla lo que ocurre dentro de los registros.
 
 ```{admonition} Objetivos de aprendizaje
 :class: tip
 
-- Entender Verilog como lenguaje de descripcion de hardware.
-- Crear, compilar y ejecutar un primer fichero `.v`.
-- Usar constantes, registros, cables y `$display` para comprobar resultados.
+- Entender qué es Verilog y para qué sirve un lenguaje de descripción de hardware.
+- Crear, compilar y ejecutar un fichero `.v` con `iverilog`.
+- Escribir comentarios, cadenas de caracteres y constantes numéricas en distintas bases.
+- Declarar registros (`reg`) de uno o varios bits, con y sin signo.
+- Imprimir valores con `$display` usando los códigos de formato adecuados.
+- Aplicar operadores aritméticos, distinguir `reg` de `wire` y reconocer los valores `x` y `z`.
 ```
 
-## Presentacion de Verilog
-Verilog es una herramienta de diseño digital
-asistido por ordenador (
+## Qué es Verilog
 
-Computer-Aided
-Digital Design
+Verilog es un **lenguaje de descripción de hardware** (*HDL: Hardware Description Language*). Fue creado en 1983 y está estandarizado por el IEEE.
 
-). Con la llegada de la
-tecnología VLSI (
+La diferencia con un lenguaje de programación normal es importante: cuando escribimos en C le damos órdenes a un procesador que ya existe; cuando escribimos en Verilog **describimos un circuito**. A partir de esa descripción, las herramientas de síntesis pueden generar automáticamente las puertas lógicas y sus interconexiones.
 
-Very Large Scale Integration
+Con la llegada de la tecnología VLSI (*Very Large Scale Integration*), con más de 100.000 transistores en un solo chip, diseñar a mano dejó de ser viable. Por eso estas herramientas se convirtieron en un estándar industrial.
 
-),
-con más de 100,000 transistores en un chip,
-estas herramientas se han convertido en un estándar
-industrial y son imprescindibles.
+```{admonition} Verilog se parece mucho a C
+:class: note
 
-En concreto, Verilog es un lenguaje de descripción
-de hardware ( *HDL: Hardware Description Language* ),
-creado en 1983 en la compañía Automated 
-Integrated Design Systemas. Verilog está estandarizado
-por el IEEE. Los HDLs permiten describir
-un diseño al nivel de transferencia entre registros.
-Los detalles de más bajo nivel (puertas lógicas
-y su interconexión) pueden ser generadas por
-herramientas automáticas de síntesis a partir
-de su descripción en un HDL. Los HDLs también
-se pueden usar para simular y depurar el resultado obtenido,
-por lo que la elaboración de hardware sigue
-un proceso en la actualidad que coincide en muchos aspectos 
-con la elaboración de software.
-
-La sintaxis de Verilog es muy similar a la sintaxis de C, por
-lo que estas prácticas os servirán de apoyo y
-complemento a las realizadas en las asignaturas de 
-programación.
-
-## Configuracion del entorno de trabajo
-Las prácticas se realizarán en el Sistema
-Operativo GNU/Linux. Para poder trabajar en vuestra casa,
-es muy conveniente que os instaléis una distribución
-de Linux.
-
-[Icarus 
-Verilog](http://www.icarus.com/eda/verilog/) y [GPL
-Cver](http://sourceforge.net/projects/gplcver/) son dos implementaciones de Verilog libres que
-están disponibles para Linux.
-
-Si os instaláis una distribución de Linux
-basada en Debian (la propia Debian, u otras más
-sencillas como Kubuntu), debéis instalar los
-paquetes `iverilog` y/o `gplcver` :
-
-```text
-sudo apt-get install iverilog
-sudo apt-get install gplcver
+La sintaxis de Verilog es casi idéntica a la de C: mismos comentarios, mismos operadores aritméticos, mismos códigos de formato. Todo lo que aprendas aquí te servirá en las asignaturas de Programación, y al revés.
 ```
 
-En los ordenadores de clase, ya están instalados
-estos dos paquetes.
+Además de sintetizar circuitos, un HDL permite **simularlos y depurarlos**. En estas primeras sesiones usaremos Verilog casi como si fuera un lenguaje de programación: simularemos programas pequeños para entender cómo se representan y manipulan los datos dentro de un computador.
 
-Se necesita, tambíen, un editor de texto para
-generar los programas. Cualquiera que genere texto
-plano puede ser válido: `vi` , `kate` , `gedit` , etc.
+## Preparar el entorno de trabajo
 
-## Primer programa en Verilog
-Aunque el objetivo principal de verilog es el diseño de
-hardware, es tradicional que el primer programa que se
-prueba en un nuevo lenguaje de programación sea uno
-que imprima en la pantalla las palabras
+Las prácticas se realizan sobre GNU/Linux. Usaremos **Icarus Verilog** (`iverilog`), una implementación libre de Verilog.
 
-Hola mundo
+Comprueba que está instalado:
 
-.
+```bash
+iverilog -V
+```
 
-Abrid, pues, el editor de textos para generar el siguiente
-fichero al que nombraréis `hello.v` :
+Si responde con un número de versión, ya lo tienes. Si responde `command not found`, instálalo:
+
+```bash
+sudo apt update
+sudo apt install iverilog
+```
+
+```{admonition} Trabajar en casa
+:class: tip
+
+En los ordenadores del aula ya está todo instalado. Para trabajar en casa te conviene instalar una distribución de Linux basada en Debian (la propia Debian, Ubuntu o Kubuntu) y ejecutar los comandos anteriores. También existe `gplcver`, otra implementación libre; se usa con `cver fichero.v` y no necesita compilación previa.
+```
+
+Necesitas también un editor de texto plano. Cualquiera vale: `gedit`, `kate`, `nano`, `vi`, etc. En los ejemplos usaremos `gedit`.
+
+Crea una carpeta para esta sesión y entra en ella:
+
+```bash
+mkdir -p ~/verilog/sesion_01
+cd ~/verilog/sesion_01
+```
+
+## Primer programa: `hello.v`
+
+Aunque el objetivo de Verilog es diseñar hardware, es tradición que el primer programa en cualquier lenguaje escriba en pantalla las palabras *Hola mundo*.
+
+Abre el editor:
+
+```bash
+gedit hello.v
+```
+
+Y escribe:
 
 ```verilog
 /* Programa de ejemplo: hello.v */
@@ -94,203 +79,139 @@ fichero al que nombraréis `hello.v` :
 module hello;
 
   initial
-    // Imprimimos el mensaje y un salto de lInea
+    // Imprimimos el mensaje y un salto de linea
     $display("Hola, mundo\n");
 
 endmodule
 ```
 
-Una vez hayáis guardado el programa, debéis
-abrir una ventana con la línea de órdenes.
-Observad que habéis creado bien el programa tecleando `ls -l` . Os ha de aparecer una línea
-similar a la siguiente:
+Guarda y comprueba que el fichero existe:
 
-```text
--rw-r--r-- 1 gyermo gyermo   151 2010-05-20 20:50 hello.v
+```bash
+ls -l
 ```
 
-Procedamos ahora a compilar y ejecutar el programa:
-
-1. **Primero con iverilog** : Compilamos: iverilog hello.v -o hello Debe aparecer ahora un fichero ejecutable, cuyo nombre
-será `hello` . Miradlo con `ls -l` : -rwxr-xr-x 1 gyermo gyermo 448 2010-05-20 20:50 hello
--rw-r--r-- 1 gyermo gyermo 151 2010-05-20 20:50 hello.v Finalmente, lo ejecutamos con `./hello` : Hola, mundo
-2. **Ahora, con cver** : Con `cver` no es necesario compilar. Simplemente
-hay que teclear `cver hello.v` . La salida es: GPLCVER_2.12a of 05/16/07 (Linux-elf).
-Copyright (c) 1991-2007 Pragmatic C Software Corp.
-All Rights reserved. Licensed under the GNU General Public License (GPL).
-See the 'COPYING' file for details. NO WARRANTY provided.
-Today is Thu May 20 21:39:01 2010.
-Compiling source file "hello.v"
-Highest level modules:
-hello
-Hola, mundo
-0 simulation events and 0 declarative immediate assigns processed.
-1 behavioral statements executed (1 procedural suspends).
-Times (in sec.): Translate 0.0, load/optimize 0.1, simulation 0.1.
-End of GPLCVER_2.12a at Thu May 20 21:39:01 2010 (elapsed 0.0 seconds). Esta salida también se escribe en un fichero denominado `verilog.log` . Lo podéis comprobar tecleando `cat verilog.log` .
-
-De ahora en adelante, podéis usar cualquiera de los
-dos, `iverilog` o `cver` , a no ser que
-se especifique lo contrario en algún apartado.
-
-## Comentarios
-Los comentarios se marcan como en C.
+Debe aparecer una línea parecida a esta:
 
 ```text
+-rw-r--r-- 1 alumno alumno 151 sep 18 20:50 hello.v
+```
+
+Ahora **compila** el programa. La opción `-o` indica el nombre del ejecutable que queremos obtener:
+
+```bash
+iverilog hello.v -o hello
+```
+
+Y **ejecútalo**:
+
+```bash
+./hello
+```
+
+La salida es:
+
+```text
+Hola, mundo
+```
+
+```{admonition} El ciclo de trabajo de todas las sesiones
+:class: important
+
+Este ciclo se repetirá en todas las prácticas del curso:
+
+1. Editar el fichero `.v` con `gedit`.
+2. Compilar con `iverilog fichero.v -o simulacion`.
+3. Ejecutar con `./simulacion`.
+4. Comparar la salida con lo que habíamos previsto.
+
+Si al compilar aparecen errores, **no ejecutes**: corrige primero el fichero y vuelve a compilar.
+```
+
+## Comentarios
+
+Los comentarios se escriben igual que en C. El simulador los ignora, pero para quien lee el código son imprescindibles.
+
+```verilog
 /* Este es un tipo de comentario */
 
 /* Este tipo de comentario puede abarcar
-   varias lIneas */
+   varias lineas */
 
-// Este tipo de comentario sOlo puede abarcar una lInea
+// Este tipo de comentario solo puede abarcar una linea
 ```
 
 ## Cadenas de caracteres
-Las cadenas de caracteres se encierran entre comillas dobles
-("). Algunos caracteres se marcan de modo especial:
 
-| \n | retorno del carro |
-| --- | --- |
-| \t | tabulador |
-| %% | % |
-| \\ | \ |
-| \" | " |
-| \ xxx | cualquier carácter, xxx en octal |
+Las cadenas de caracteres se encierran entre comillas dobles (`"`). Algunos caracteres se escriben de forma especial:
 
-`"Hola, mundo\n"` es un ejemplo de una cadena
-de caracteres que tiene 12 caracteres: 4 caracteres de la palabra *Hola* , una coma, un espacio, 5 caracteres de la palabra *mundo* y un carácter especial que hace que se produzca
-un salto a la línea siguiente ( `\n` ).
+| Secuencia | Significado |
+|---|---|
+| `\n` | Salto de línea |
+| `\t` | Tabulador |
+| `%%` | El carácter `%` |
+| `\\` | El carácter `\` |
+| `\"` | Comilla doble |
+| `\xxx` | Cualquier carácter, con `xxx` en octal |
 
-## Constantes numericas
-Si no se indica nada, una constante numérica es interpretada
-por Verilog en decimal. También se pueden expresar
-constantes numéricas en otras bases anteponiendo los
-prefijos:
+La cadena `"Hola, mundo\n"` tiene 12 caracteres: los 4 de la palabra *Hola*, una coma, un espacio, los 5 de la palabra *mundo* y un carácter especial que produce el salto de línea (`\n`). Fíjate en que `\n` cuenta como **un solo carácter**, aunque lo escribamos con dos símbolos.
 
-'b
+## Constantes numéricas
 
-(binario),
+Si no se indica nada, Verilog interpreta una constante numérica en **decimal**. Para usar otras bases se antepone un prefijo:
 
-'o
+| Prefijo | Base | Ejemplo | Valor decimal |
+|---|---|---|---|
+| `'b` | Binario | `'b1011` | 11 |
+| `'o` | Octal | `'o17` | 15 |
+| `'d` | Decimal | `'d25` | 25 |
+| `'h` | Hexadecimal | `'hD1C` | 3356 |
 
-(octal),
+Para un número negativo se antepone el signo menos delante de todo: `-'hD1C`.
 
-'d
+Los números **reales** se escriben con el punto como separador decimal o en notación científica, por ejemplo `7.237e10`. Solo se admite la base 10 en los reales.
 
-(el propio decimal)
+Para que los números binarios largos sean legibles, se permite intercalar guiones bajos. El simulador los ignora:
 
-'h
+```verilog
+// Estas dos constantes valen exactamente lo mismo
+'b1_1011_1111_1000
+'b1101111111000
+```
 
-(hexadecimal).
+## Tipos de dato numéricos
 
-Si el numero es negativo, se antepone el signo menos.
-Por ejemplo, `-'hD1C` .
+Para estos primeros programas usaremos dos tipos de variable pensados para simular, no para describir hardware:
 
-Los numeros reales se pueden expresar en la notación
-habitual, usando el punto como separador decimal o en notación
-científica (por ejemplo, `7.237e10` ).
-Solamente se admite
-la base 10 en los numeros reales.
+| Tipo | Contiene | Tamaño |
+|---|---|---|
+| `integer` | Un entero con signo | El de la palabra del ordenador, como mínimo 32 bits |
+| `real` | Un número en coma flotante | Depende de la máquina |
 
-Con el objetivo de aumentar la legibilidad de los numeros
-binarios, se permite el uso del carácter de subrayado
-dentro de una constante numérica. Por ejemplo, `'b1_1011_1111_1000` es lo mismo que `'b1101111111000` .
+Más adelante, en la sección {ref}`registros`, veremos `reg`, que es el tipo que sí representa almacenamiento real de bits.
 
-## Tipos de dato de registros
-En Verilog existen dos tipos de datos numéricos, uno
-que representa un entero con signo (
+## Bloques de código: `begin` y `end`
 
-integer
+En C, instrucciones como `for`, `if` o `while` admiten en su cuerpo una única instrucción o un bloque de varias encerrado entre llaves (`{` y `}`). En Verilog esa misma función la cumplen las palabras reservadas **`begin`** y **`end`**.
 
-) y
-otro un numero de coma flotante (
+Por eso en `hello.v` el bloque `initial` no lleva `begin` ni `end`: solo contiene una instrucción. En cuanto haya dos o más, son obligatorios:
 
-real
-
-).
-
-El entero será del tamaño de la palabra
-que maneje nuestro ordenador, pero, como mínimo de
-32 bits.
-
-## Bloques de codigo
-En C, algunas instrucciones como
-
-for
-
-,
-
-if
-
-o
-
-while
-
-admiten en su cuerpo
-una unica instruccion o varias (un bloque
-de instrucciones). En C, estos bloques se encierran entre
-llaves (
-
-{
-
-y
-
-}
-
-). En Verilog, esta
-misma función la realizan las palabras reservadas
-
+```verilog
+initial
 begin
-
-y
-
+  i = 4;
+  f = 2.7172;
+  $display("i vale %d y f vale %g", i, f);
 end
+```
 
-.
+## La función `$display`
 
-Así, la instruccion `initial` del ejemplo `hello.v` solo tienen una instruccion `$display` en su cuerpo. No necesita, por tanto,
-ni `begin` ni `end` . Si llevara más
-instrucciones sí que sería necesario, como en el ejemplo
-del apartado siguiente.
+Una función tiene varios argumentos (o parámetros) y normalmente devuelve un valor. En programación, además, puede ejecutar instrucciones cuando se la llama y puede no devolver nada. Los parámetros se escriben entre paréntesis, a continuación del nombre, separados por comas.
 
-## Funcion $display
-Una función, al igual que ocurre en matemáticas, se
-caracteriza en programación porque tiene varios argumentos
-o parámetros y devuelve un valor. Las funciones en programación
-se diferencian de las funciones matemáticas en que pueden no devolver nada
-y pueden ejecutar instrucciones en su interior cuando se las llama.
-Los parámetros de una función aparecen entre comillas
-a continuación del nombre de la función y van separados
-por comas.
+`$display` admite un número arbitrario de argumentos y no devuelve nada: sirve para **sacar información por pantalla**. Sin argumentos, imprime un salto de línea. Con argumentos, el primero es siempre una cadena de caracteres.
 
-La función
-
-$display
-
-puede llevar un numero
-arbitrario de argumentos y no devuelve nada. Sirve para sacar información
-por la pantalla. Si no lleva argumentos, imprime un salto de
-línea. De llevarlos, el primero es una cadena de caracteres que,
-como en el caso de
-
-hello.v
-
-, se imprimirá en la
-pantalla.
-
-La función
-
-$display
-
-puede también imprimir
-en la pantalla el contenido de las variables que deseemos imprimir.
-Para ello, se incluye un códigos de formato en el lugar que
-queremos que aparezca el contenido de la variable. El código
-de formato también sirve para indicar en qué base, por
-ejemplo, queremos que salga el valor. Cuando se incluyen códigos
-de formato, hay que añadir un parámetro por cada uno
-de ellos indicando la variable cuyo contenido deseamos imprimir.
-Por ejemplo:
+Para imprimir el contenido de una variable se incluye un **código de formato** en el lugar donde queremos que aparezca su valor, y se añade la variable como argumento adicional. El código de formato indica además en qué base queremos ver el valor:
 
 ```verilog
 integer i;
@@ -298,304 +219,216 @@ real f;
 
 initial
 begin
-  i=4;
-  f=2.7172;
-  $display("i vale %d y f vale %g",i,f);
+  i = 4;
+  f = 2.7172;
+  $display("i vale %d y f vale %g", i, f);
 end
 ```
 
-La salida de este programa debería ser:
+La salida es:
 
 ```text
 i vale           4 y f vale 2.7172
 ```
 
-`$display` ha sustituido el primer `%d` por
-el contenido del la variable que aparece en el segundo argumento
-(la `i` ) y `%f` por el contenido de la
-variable que aparece como tercer argumento ( `j` ). Los códigos de formato de `$display` aparecen
-a continuación. Son también admisibles con
-mayúscula, con el mismo significado. 
-| %d | Entero en decimal |
-| --- | --- |
-| %b | Entero en binario |
-| %o | Entero en octal |
-| %h | Entero en hexadecimal |
-| %c | Carácter |
-| %s | Cadena de caracteres |
-| %f | Real en formato decimal |
-| %e | Real en formato científico |
-| %g | Real en el formato más corto 
-de los dos anteriores |
+`$display` ha sustituido `%d` por el contenido de la variable que aparece como segundo argumento (`i`), y `%g` por el de la que aparece como tercero (`f`). El orden importa: el primer código de formato se corresponde con el primer argumento después de la cadena.
 
-## Estructura del programa
-El programa anterior os puede haber quedado parecido a este:
+Estos son los códigos de formato disponibles. También se admiten en mayúscula, con el mismo significado:
 
-La {numref}`fig-verilog-01-ej-1-9` reproduce la figura original usada en este punto de la sesion.
+| Código | Imprime |
+|---|---|
+| `%d` | Entero en decimal |
+| `%b` | Entero en binario |
+| `%o` | Entero en octal |
+| `%h` | Entero en hexadecimal |
+| `%c` | Carácter |
+| `%s` | Cadena de caracteres |
+| `%f` | Real en formato decimal |
+| `%e` | Real en formato científico |
+| `%g` | Real en el más corto de los dos formatos anteriores |
+
+```{admonition} El mismo número, cuatro caras distintas
+:class: tip
+
+Un registro no guarda "un número decimal" ni "un número hexadecimal": guarda bits. La base solo aparece cuando lo imprimimos. Prueba a mostrar el mismo valor con `%d`, `%b`, `%o` y `%h` y comprueba que las cuatro salidas describen el mismo contenido.
+```
+
+## Anatomía de un programa en Verilog
+
+Un programa completo con lo visto hasta ahora queda parecido a este:
 
 ```{figure} ../../_static/verilog/sesion_01/ej_1_9.png
 ---
 name: fig-verilog-01-ej-1-9
-alt: Ejercicio 1.9
+alt: Programa de ejemplo en Verilog con dos variables y una llamada a $display.
 width: 85%
 align: center
 ---
-Ejercicio 1.9
+Programa de ejemplo con dos variables y una llamada a `$display`.
 ```
 
-Veamos someramente de qué partes está compuesto:
-
-La {numref}`fig-verilog-01-ej-1-9-comentado` reproduce la figura original usada en este punto de la sesion.
+Veamos de qué partes está compuesto:
 
 ```{figure} ../../_static/verilog/sesion_01/ej_1_9_comentado.png
 ---
 name: fig-verilog-01-ej-1-9-comentado
-alt: Ejercicio 1.9 comentado
+alt: El mismo programa con las cinco zonas señaladas: nombre del modulo, definicion de variables, bloque initial, area de instrucciones y fin del modulo.
 width: 85%
 align: center
 ---
-Ejercicio 1.9 comentado
+El mismo programa con sus cinco zonas señaladas.
 ```
 
-1. **Nombre e inicio del módulo** : un programa puede
-tener, como ya veremos, varios módulos y al menos
-debe tener uno. Le debemos dar un nombre a cada módulo.
-El nombre elegido para el módulo de este programa
-ha sido `ej_1_9`
-2. **Área de definición de las variables** : 
-las variables son elementos de nuestro programa capaces de almacenar
-un valor. Todas tienen un nombre que las identifica ( `i` y `f` en las dos que aparecen en el ejemplo) y son de
-una clase (tecnicamente *tienen un tipo* ). El tipo
-de variable nos indica la clase de valores que puede contener
-la variable. En el ejemplo, la primera variable puede contener
-enteros ( `integer` ) y la segunda variable, numeros
-de coma flotante ( `real` ). En el área marcada
-se definirán las variables que vamos a usar en el módulo
-3. **Bloque initial** : dentro de este bloque
-situaremos las instrucciones del módulo (el programa).
-Las instrucciones se irán ejecutando una tras otra.
-Si el bloque contuviera una unica instruccion, como
-en el primer ejemplo ( `hello.v` ), no sería necesario
-incluir las palabras `begin` y `end` . En el
-resto de casos se incluyen para que el ordenador sepa dónde
-empieza y acaba el bloque
-4. **Área de instrucciones** : las instrucciones
-de un programa se pueden extender y partir en varias líneas.
-Lo que marca el fin de una instruccion es el punto y coma
-final, que es obligatorio. En el ejemplo damos valores a las
-variables `i` y `j` y, posteriormente,
-imprimimos el contenido de las variables con la función `$display` .
-5. **Fin del módulo** : es obligatorio marcarlo
-con `endmodule`
+**A. Nombre e inicio del módulo.** Un programa puede tener varios módulos, y debe tener al menos uno. Cada módulo lleva un nombre; en este ejemplo es `ej_1_9`.
 
-Notas:
+**B. Área de definición de las variables.** Las variables son los elementos capaces de almacenar un valor. Todas tienen un nombre que las identifica (`i` y `f` en el ejemplo) y un **tipo**, que indica qué clase de valores puede contener. Aquí la primera es un `integer` y la segunda un `real`. Todas las variables del módulo se declaran en esta zona.
 
-- La orden `module` , las declaraciones de variables
-y las órdenes de nuestro programa deben acabar
-obligatoriamente en punto y coma ( `;` )
-- La sintaxis de Verilog y sus conceptos son muy similares a los
-del lenguaje de programación C que estudiaréis
-en las asignaturas de Programación. Aunque ahora
-os cueste digerir estos conceptos, los veréis en profundidad
-y cobrarán sentido en dichas asignaturas
+**C. Bloque `initial`.** Aquí van las instrucciones, que se ejecutan una tras otra. Si el bloque contiene una sola instrucción, como en `hello.v`, no hacen falta `begin` ni `end`; en el resto de casos sí, para marcar dónde empieza y dónde acaba el bloque.
 
-## Ejercicio 1
+**D. Área de instrucciones.** Una instrucción puede repartirse en varias líneas: lo que marca su final es el **punto y coma**, que es obligatorio. En el ejemplo damos valores a `i` y `f` y después imprimimos su contenido con `$display`.
 
-Responde a las siguientes preguntas provenientes de los ejemplos vistos en teoría, primero realizando el cálculo manualmente y, luego, comprobándolo con un programa en Verilog:
+**E. Fin del módulo.** Es obligatorio cerrarlo con `endmodule`. Fíjate en que `endmodule` **no** lleva punto y coma.
+
+```{admonition} Dos reglas que ahorran muchos errores
+:class: warning
+
+- La orden `module`, las declaraciones de variables y las instrucciones acaban **obligatoriamente** en punto y coma (`;`).
+- `begin`, `end` y `endmodule` no llevan punto y coma.
+```
+
+## Ejercicio 1. Conversiones entre bases
+
+Responde a estas preguntas **primero a mano** y después compruébalo con un programa en Verilog:
 
 1. Expresa en decimal el número `0x1FEA`.
-2. Ídem el número en binario `1000101`~2~.
+2. Expresa en decimal el número binario `1000101`.
 3. Expresa en octal el número `1234`.
-4. Pasa a hexadecimal el número en binario `1010011`~2~.
+4. Pasa a hexadecimal el número binario `1010011`.
 
+(registros)=
 ## Registros
-Las variables de tipo representan unidades de almacenamiento.
-Si no se especifica nada, los registros serán de un bit.
-Si se desean de más de un bit, hay que declararlo
-explícitamente. Estos registros de más de un
-bit son, por defecto, sin signo. Si se quieren con signo,
-se añade la palabra clave
 
-signed
+Las variables de tipo `reg` representan **unidades de almacenamiento**: son lo más parecido a un conjunto de biestables guardando bits.
 
-, como
-se muestra en los siguientes ejemplos:
+Si no se especifica nada, un registro es de **un bit**. Para tener más bits hay que declararlo explícitamente indicando el rango. Los registros de más de un bit son, por defecto, **sin signo**; si los queremos con signo se añade la palabra clave `signed`:
 
-```text
+```verilog
 reg reloj;           /* Registro de un bit */
 reg [31:0] busA;     /* Registro de 32 bits, sin signo */
 reg signed [63:0] m; /* Registro de 64 bits, con signo */
 ```
 
-Al asignarle un valor a un registro, podemos hacerlo al
-completo o a un subconjunto de sus bits. Si lo que se
-asigna es una constante, se le puede anteponer su tamaño
-en bits:
+La notación `[31:0]` significa que el bit más significativo es el 31 y el menos significativo el 0.
 
-```text
-reloj=1'b0;
-busA='hAAAABBBB;
-busA[7:4]=4'hC;
-m=-1;
+Al asignar un valor podemos hacerlo al registro completo o solo a un subconjunto de sus bits. Si lo que asignamos es una constante, podemos anteponerle su tamaño en bits:
+
+```verilog
+reloj = 1'b0;         // 1 bit, valor binario 0
+busA = 'hAAAABBBB;    // el registro entero
+busA[7:4] = 4'hC;     // solo los bits 7 a 4
+m = -1;               // registro con signo
 ```
 
-## Ejercicio 2
+## Ejercicio 2. Trabajar con registros
 
-Declarad las variables y asignarles los valores del apartado anterior. Imprimidlas después en hexadecimal y tratad de adivinar el resultado que aparece por pantalla. A continuación, dad respuesta a las siguientes preguntas relacionadas con la teoría, primero manualmente y, luego, con Verilog:
+Declara las variables del apartado anterior, asígnales esos mismos valores e imprímelas en hexadecimal. **Antes de ejecutar**, intenta adivinar qué va a aparecer por pantalla.
 
-1. Almacenad en un registro de 16 bits el número `2323` e imprimidlo en binario y hexadecimal.
-2. Escribid en hexadecimal, binario y decimal el número mayor y más pequeño que se puede almacenar en un registro de 16 bits sin signo.
-3. ¿Qué expresión tiene en binario el número `6789` cuando se expresa en complemento a dos en un registro de 16 bits?
-4. Expresar el `-22` en un registro de ocho bits y pasarlo a uno de 16 bits extendiendo el signo.
+Después, responde primero a mano y luego con Verilog:
 
-## Operadores aritmeticos
-Los operadores aritméticos coinciden con los de C:
-suma (
+1. Almacena en un registro de 16 bits el número `2323` e imprímelo en binario y en hexadecimal.
+2. Escribe en hexadecimal, binario y decimal el número mayor y el más pequeño que se pueden almacenar en un registro de 16 bits **sin signo**.
+3. ¿Qué expresión tiene en binario el número `6789` cuando se representa en complemento a dos en un registro de 16 bits?
+4. Expresa el `-22` en un registro de ocho bits y pásalo a uno de 16 bits **extendiendo el signo**.
 
-+
+## Operadores aritméticos
 
-), resta (
+Los operadores aritméticos coinciden con los de C, con una adición:
 
--
+| Operador | Operación |
+|---|---|
+| `+` | Suma |
+| `-` | Resta |
+| `*` | Multiplicación |
+| `/` | División |
+| `%` | Módulo (resto de la división entera) |
+| `**` | Exponenciación (no existe en C) |
 
-), 
-multiplicación (
-
-*
-
-) y
-división (
-
-/
-
-). También existe un
-operador de exponenciación que no existe en C
-(
-
-**
-
-).
-
-La división de dos cantidades enteras nos da
-la parte entera del cociente. Si se quiere saber cuál
-es el resto de la división, se debe usar el
-operador módulo ( `%` ).
-
-## Ejercicio 3 (más difícil)
-
-Declarad una variable de tipo registro de 16 bits. Asignadle un valor cualquiera. Escribid mediante cuatro instrucciones `$display` los cuatro dígitos hexadecimales que forman el registro, empezando por el menos significativo.
-
-Por ejemplo, si asignáis a la variable `'hAB12`, debe salir por la pantalla `2`, `1`, `b` y `a`.
-
-## Operaciones de desplazamiento de bits
-Hemos visto en teoría que existen cuatro tipos de
-desplazamiento de bits en un registro. Estos son los
-cuatro tipos con el operador que se usa en Verilog para
-usarlos:
-
-- Desplazamiento lógico a la derecha 
-( `>>` )
-- Desplazamiento lógico a la izquierda
-( `<<` )
-- Desplazamiento aritmético a la derecha
-( `>>>` )
-- Desplazamiento aritmético a la izquierda
-( `<<<` )
-
-La diferencia entre desplazamiento lógico y aritmético
-estriba en que el último respeta el bit de signo
-en numeros expresados en complemento a dos en registros
-con signo. Por ejemplo:
-
-| LOGICAL 
-SHIFT RIGHT (con signo o sin signo) |
-| --- |
-| 1011101010101011 |
-| >> 7 |
-| 0000000101110101 |
-|  |
-| ARITHMETIC
-SHIFT RIGHT (con signo) |
-| 1011101010101011 |
-| >>> 7 |
-| 1111111101110101 |
-
-En el caso de que el registro sea sin signo, ambos tipos de
-desplazamiento coinciden:
-
-| ARITHMETIC
-SHIFT RIGHT (sin signo) |
-| --- |
-| 1011101010101011 |
-| >>> 7 |
-| 0000000101110101 |
-
-El primer operando es el numero que se quiere desplazar y
-el segundo indica el numero de bits, como en este ejemplo
-en que se desplaza 3 posiciones a la izquierda el contenido del
-registro `a` y el resultado se escribe en `b` :
-
-```text
-b= (a<<3);
-```
-
-## Ejercicio 4 (más difícil)
-
-Declarad dos números enteros con signo de 16 bits, `pos` y `neg`, y dadles un valor inicial positivo al primero y negativo al segundo.
-
-Efectuad los cuatro tipos de desplazamientos sobre los números originales y anotad el resultado. Debéis imprimir los números en binario y decimal. Los desplazamientos serán todos de un bit. Se debe restaurar el valor de `pos` y `neg` después de cada desplazamiento.
+La división de dos cantidades enteras devuelve **solo la parte entera** del cociente. Si queremos el resto, usamos el operador módulo `%`. Por ejemplo, `17 / 5` vale `3` y `17 % 5` vale `2`.
 
 ## Redes y cables
-Hay un tipo especial de variables en Verilog denominadas de
-forma genérica como
 
-nets
+Hay un tipo especial de variables en Verilog llamadas genéricamente **nets** (redes). La más frecuente es **`wire`** (cable).
 
-(redes) de las que
-el tipo más frecuente es
+Estas variables se usan igual que los cables en la realidad: para **conectar** puertas o módulos entre sí. Su tamaño es, por defecto, de un bit.
 
-wire
+La diferencia fundamental con los registros es esta:
 
-(cable).
+| | `reg` | `wire` |
+|---|---|---|
+| Qué hace | **Almacena** un valor | **Transmite** un valor |
+| De dónde saca su valor | De una asignación dentro de un bloque | De otro elemento que se lo suministra continuamente |
+| Analogía | Un interruptor que queda puesto | Un cable que solo conduce lo que le llega |
 
-Estas variables se usan como los cables en la realidad:
-para conectar puertas o módulos entre sí.
-Su tamaño es, por defecto, de un bit.
+Un `wire` necesita que algún otro elemento le esté proporcionando su valor en todo momento; no es capaz de recordarlo por sí mismo. Usaremos los `wire` en serio a partir de la sesión de puertas lógicas.
 
-Necesitan que algún otro elemento les esté
-proporcionando su valor, al contrario que los registros,
-que son capaces de almacenarlo.
+## Valores especiales: `x` y `z`
 
-## Valores especiales
-Cada bit de un cable o de un registro puede, además
-de tomar valores fijos (0 ó 1), tomar uno de estos
-dos valores:
+Cada bit de un cable o de un registro puede, además de valer 0 o 1, tomar uno de estos dos valores:
 
-1. *Indefinido* : se representa por `x` y significa que el valor puede ser cero o uno, no
-se sabe
-2. *Alta impedancia* : se representa por `z` y tiene el significado habitual en
-electronica
+- **`x` — indefinido**: el valor puede ser cero o uno, pero no se sabe. Aparece, por ejemplo, cuando leemos un registro al que nunca hemos asignado nada.
+- **`z` — alta impedancia**: tiene el significado habitual en electrónica; el cable está efectivamente desconectado.
 
-Tanto `x` como `z` funcionan como
-digitos normales. Por ejemplo, el valor `'b11xxzz00` indica que los primeros 
-dos bits son 1, los dos siguientes no se sabe, los dos
-siguientes están en alta impedancia y los
-dos ultimos son 0.
+Tanto `x` como `z` funcionan como dígitos normales dentro de una constante. Por ejemplo, `'b11xxzz00` indica que los dos primeros bits son 1, los dos siguientes no se saben, los dos siguientes están en alta impedancia y los dos últimos son 0.
 
-Si al asignar un valor en un programa a un registro, el
-valor especificado es de menos bits que el registro, se asigna
-valor a esos bits con la siguiente regla: si el valor especificado 
-tiene el bit 
-más significativo a 1 ó 0, los bits más
-significativos asignados son 0. Si dicho bit es `x` ,
-son `x` . Y, si es `z` , son `z` .
+Hay una regla que conviene conocer: si asignamos a un registro un valor con **menos bits** de los que tiene el registro, los bits sobrantes de la izquierda se rellenan así:
 
-## Ejercicio 5
+| Bit más significativo del valor asignado | Con qué se rellena a la izquierda |
+|---|---|
+| `0` o `1` | Con `0` |
+| `x` | Con `x` |
+| `z` | Con `z` |
 
-Definid un registro de 16 bits que tenga sus cuatro bits más significativos ceros, los siguientes cuatro unos, los siguientes cuatro `x` y los últimos cuatro `z`.
+## Ejercicio 3. Registros con valores indefinidos
 
-Imprimid en binario el valor del registro. Realizad operaciones con él y observad el resultado.
+Define un registro de 16 bits cuyos cuatro bits más significativos sean ceros, los cuatro siguientes unos, los cuatro siguientes `x` y los cuatro últimos `z`.
+
+Imprime en binario el valor del registro. Después realiza operaciones aritméticas con él (una suma, una multiplicación) e imprime el resultado.
+
+## Órdenes de la terminal relacionadas
+
+Un recordatorio de la sesión 0 con los comandos que más usarás en estas prácticas:
+
+| Comando | Qué hace |
+|---|---|
+| `ls` | Lista el contenido de un directorio |
+| `cd` | Cambia el directorio de trabajo |
+| `cat` | Muestra el contenido de un fichero |
+| `rm` | Borra un fichero |
+| `man` | Muestra la página de manual de una orden. Se sale con `q` |
+
+## Errores frecuentes en esta sesión
+
+| Mensaje o síntoma | Qué revisar |
+|---|---|
+| `syntax error` al compilar | Falta un punto y coma al final de una instrucción o de una declaración |
+| `I give up.` tras el error anterior | Es el mensaje habitual de `iverilog` cuando no puede seguir; corrige el primer error de la lista y vuelve a compilar |
+| No aparece nada por pantalla | Falta el bloque `initial`, o el `$display` está fuera del módulo |
+| Se imprime `x` en vez de un número | La variable no tiene valor asignado, o se ha operado con un valor que contenía `x` |
+| `./hello: No such file or directory` | No has compilado todavía, o el nombre tras `-o` no coincide con el que ejecutas |
+| El número sale bien en decimal pero mal en binario | Revisa el código de formato: `%d` y `%b` no son intercambiables |
+
+## Cierre
+
+Antes de pasar a la sesión 2 deberías ser capaz de, sin mirar apuntes:
+
+- escribir un módulo mínimo con `module`, `initial` y `endmodule`;
+- compilarlo y ejecutarlo con `iverilog` y `./`;
+- escribir una constante en las cuatro bases;
+- declarar un registro de N bits, con y sin signo;
+- imprimir el mismo valor en decimal, binario, octal y hexadecimal.
+
+Guarda el fichero `.v` de cada ejercicio y anota al lado qué esperabas y qué imprimió realmente la simulación. Comparar ambas cosas es la forma más rápida de encontrar errores.
 
 ## Fuente original
 
-Contenido adaptado a TeachBook a partir de la pagina de referencia: <http://avellano.usal.es/~compi/sesion1.htm>.
+Contenido adaptado a TeachBook a partir de la página de referencia de la asignatura: <http://avellano.fis.usal.es/~compi/sesion1.htm>.

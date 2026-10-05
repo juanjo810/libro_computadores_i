@@ -1,14 +1,10 @@
 format: jb-book
 root: en/01_verilog/session_00_ubuntu_terminal
-parts:
-  - caption: Sessions
-    chapters:
-      - file: en/01_verilog/session_03_logic_gates
-# Content temporarily hidden to publish only Session 0.
-# - file: en/intro
-# - file: en/01_verilog/session_01_introduction
-# - file: en/01_verilog/session_02_operations
-# - file: en/01_verilog/session_03_logic_gates
+chapters:
+  - file: en/01_verilog/session_01_introduction
+  - file: en/01_verilog/session_02_operations
+  - file: en/01_verilog/session_03_logic_gates
+# Content temporarily hidden.
 # - file: en/01_verilog/session_04_modules
 # - file: en/01_verilog/session_05_routers_and_adders
 # - file: en/01_verilog/session_06_flip_flops

@@ -225,9 +225,11 @@ function injectLanguageSwitcher(languages, rootPrefix) {
             </button>
             <ul class="teachbook-lang-dropdown">
                 ${languages.map(l => {
-        // rootPrefix is the relative path to the book root (e.g., "../" from /es/intro.html)
-        // So rootPrefix + "en/intro.html" = "../en/intro.html" which resolves correctly
-        const targetUrl = rootPrefix + `${l.code}/intro.html`;
+        // rootPrefix is the relative path to the book root (e.g., "../" from /es/page.html)
+        // Each language declares its own root page in languages.json, taken from
+        // its _toc_<lang>.yml, so the switcher never points to a removed intro.html.
+        const landing = l.root || `${l.code}/intro.html`;
+        const targetUrl = rootPrefix + landing;
 
         return `
                     <li>
