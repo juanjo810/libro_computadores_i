@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 168" width="470" height="168" role="img">
+<title>Puerta BUFFER: simbolo y tabla de verdad</title>
+<rect x="1" y="1" width="468" height="166" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+<text x="22" y="36" font-family="Inter,'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="17" fill="#1E293B" text-anchor="start" font-weight="bold">BUFFER</text>
+<text x="22" y="56" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="start" font-weight="normal">buf(salida,a)</text>
+<polyline points="44,96.0 92.0,96.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="30" y="101.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="middle" font-weight="normal">a</text>
+<path d="M92.0,71.4 L142.4,96.0 L92.0,120.6 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="142.4,96.0 168.4,96.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="176.4" y="101.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#00876F" text-anchor="start" font-weight="bold">a</text>
+<rect x="324" y="44.0" width="124" height="80" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<path d="M324,72.0 V52.0 Q324,44.0 332,44.0 H440 Q448,44.0 448,52.0 V72.0 Z" fill="#EEF2F7"/>
+<polyline points="360,44.0 360,124.0" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="324,72.0 448,72.0" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="342.0" y="63.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">a</text>
+<text x="404.0" y="63.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">BUFFER</text>
+<text x="342.0" y="90.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<text x="404.0" y="90.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="bold">0</text>
+<polyline points="330,98.0 442,98.0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="330.0" y="102.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="342.0" y="116.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<rect x="392.0" y="102.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="404.0" y="116.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+</svg>

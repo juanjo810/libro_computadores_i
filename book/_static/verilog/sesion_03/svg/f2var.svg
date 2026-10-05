@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 170" width="520" height="170" role="img">
+<title>Circuito de f2 = ab + c</title>
+<path d="M110.0,70.0 H140.8 A28.0,28.0 0 0 1 140.8,126.0 H110.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<text x="133.5" y="102.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="middle" font-weight="bold">a1</text>
+<path d="M300.0,30.0 Q316.8,58.0 300.0,86.0 Q342.0,86.0 364.4,58.0 Q342.0,30.0 300.0,30.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<text x="328.0" y="62.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="middle" font-weight="bold">o1</text>
+<polyline points="60,84.0 110.0,84.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="52" y="89.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="end" font-weight="normal">r[2]</text>
+<polyline points="60,112.0 110.0,112.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="52" y="117.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="end" font-weight="normal">r[1]</text>
+<polyline points="60,44.0 306.3,44.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="52" y="49.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="end" font-weight="normal">r[0]</text>
+<polyline points="168.8,98.0 250,98.0 250,72.0 306.3,72.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="206" y="90.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#00876F" text-anchor="start" font-weight="bold">ab</text>
+<text x="206" y="120.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="11" fill="#64748B" text-anchor="start" font-weight="normal">wire</text>
+<polyline points="364.4,58.0 414.4,58.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M405.4,53.0 L414.4,58.0 L405.4,63.0 Z" fill="#1E293B"/>
+<text x="424.4" y="63.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="start" font-weight="normal">salida</text>
+<text x="424.4" y="84.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#00876F" text-anchor="start" font-weight="bold">ab+c</text>
+</svg>

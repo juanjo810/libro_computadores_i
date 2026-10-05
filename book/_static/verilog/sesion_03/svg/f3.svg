@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" role="img">
+<title>Diagrama con puertas de f3</title>
+<text x="380.0" y="30" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="middle" font-weight="bold">f<tspan baseline-shift="sub" font-size="11">3</tspan>(a,b,c) = b·c + a·b·<tspan text-decoration="overline">c</tspan> + <tspan text-decoration="overline">b</tspan>·c + c</text>
+<text x="50" y="60" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="middle" font-weight="bold">a</text>
+<text x="90" y="60" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="middle" font-weight="bold">b</text>
+<text x="130" y="60" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="middle" font-weight="bold">c</text>
+<polyline points="50,70 50,410" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="90,70 90,332.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="130,70 130,277.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M150.0,72.2 L182.4,88.0 L150.0,103.8 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="185.5" cy="88.0" r="3.1" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<path d="M150.0,122.2 L182.4,138.0 L150.0,153.8 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="185.5" cy="138.0" r="3.1" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="90,88.0 150.0,88.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90" cy="88.0" r="3.5" fill="#1E293B"/>
+<polyline points="130,138.0 150.0,138.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="130" cy="138.0" r="3.5" fill="#1E293B"/>
+<polyline points="188.5,88.0 230,88.0 230,182.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="188.5,138.0 270,138.0 270,357.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="236" y="80.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="start" font-weight="bold"><tspan text-decoration="overline">b</tspan></text>
+<text x="276" y="130.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="start" font-weight="bold"><tspan text-decoration="overline">c</tspan></text>
+<path d="M330.0,170.0 H357.5 A25.0,25.0 0 0 1 357.5,220.0 H330.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="230,182.5 330.0,182.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="130,207.5 330.0,207.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="130" cy="207.5" r="3.5" fill="#1E293B"/>
+<path d="M330.0,240.0 H357.5 A25.0,25.0 0 0 1 357.5,290.0 H330.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="90,252.5 330.0,252.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="90" cy="252.5" r="3.5" fill="#1E293B"/>
+<polyline points="130,277.5 330.0,277.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M330.0,320.0 H357.5 A25.0,25.0 0 0 1 357.5,370.0 H330.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="90,332.5 330.0,332.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="270,357.5 330.0,357.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M450.0,340.0 H477.5 A25.0,25.0 0 0 1 477.5,390.0 H450.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="382.5,345.0 420,345.0 420,352.5 450.0,352.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="50,410 430,410 430,377.5 450.0,377.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M520.0,100.0 Q535.0,125.0 520.0,150.0 Q557.5,150.0 577.5,125.0 Q557.5,100.0 520.0,100.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="130,112.5 525.6,112.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="130" cy="112.5" r="3.5" fill="#1E293B"/>
+<polyline points="382.5,195.0 480,195.0 480,137.5 525.6,137.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M560.0,250.0 Q575.0,275.0 560.0,300.0 Q597.5,300.0 617.5,275.0 Q597.5,250.0 560.0,250.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="382.5,265.0 500,265.0 500,262.5 565.6,262.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="502.5,365.0 530,365.0 530,287.5 565.6,287.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M650.0,160.0 Q665.0,185.0 650.0,210.0 Q687.5,210.0 707.5,185.0 Q687.5,160.0 650.0,160.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="577.5,125.0 630,125.0 630,172.5 655.6,172.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="617.5,275.0 636,275.0 636,197.5 655.6,197.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="707.5,185.0 729.5,185.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="711.5" y="173.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#00876F" text-anchor="start" font-weight="bold">f<tspan baseline-shift="sub" font-size="11">3</tspan></text>
+<text x="390.5" y="215.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal"><tspan text-decoration="overline">b</tspan>·c</text>
+<text x="390.5" y="285.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">b·c</text>
+<text x="386.5" y="367.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">b·<tspan text-decoration="overline">c</tspan></text>
+<text x="508.5" y="389.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">a·b·<tspan text-decoration="overline">c</tspan></text>
+<text x="537.5" y="93.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">c+<tspan text-decoration="overline">b</tspan>·c</text>
+<text x="607.5" y="319.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">b·c+a·b·<tspan text-decoration="overline">c</tspan></text>
+</svg>

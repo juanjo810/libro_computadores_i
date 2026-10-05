@@ -16,14 +16,15 @@ Third lab session. We will use Verilog to check how the logic gates seen in the 
 
 Let us recall from the theory lectures how an AND gate behaves:
 
-```{figure} ../../_static/verilog/sesion_03/and.png
+```{figure} ../../_static/verilog/sesion_03/svg/and.svg
 ---
 name: fig-verilog-en-03-and
 alt: Truth table and symbol of the AND gate
-width: 85%
+class: verilog-svg
+width: 80%
 align: center
 ---
-AND gate: truth table, FALSE/TRUE equivalence and symbol.
+AND gate: symbol, expression and truth table.
 ```
 
 Let us check, with Verilog, how this gate works:
@@ -55,11 +56,12 @@ The program defines two **registers**, `a` and `b`, which provide the gate input
 
 The gate itself is then created (**instantiated**) and given the name `a1`. For Verilog basic gates the name is optional; names are used to refer to the created elements. In the same line where the gate is created, its inputs and outputs are connected to the variables defined before.
 
-```{figure} ../../_static/verilog/sesion_03/andvar.png
+```{figure} ../../_static/verilog/sesion_03/svg/andvar.svg
 ---
 name: fig-verilog-en-03-andvar
 alt: Instance a1 of an AND gate with inputs a and b and output salida
-width: 35%
+class: verilog-svg
+width: 70%
 align: center
 ---
 Instance `and a1(salida,a,b);`: the first argument is the output (a `wire`) and the following ones are the inputs (the `reg`s `a` and `b`).
@@ -122,11 +124,12 @@ Let us recall some other gates from the theory lectures and how they are written
 
 ### OR gate · `or(salida,a,b)`
 
-```{figure} ../../_static/verilog/sesion_03/or.png
+```{figure} ../../_static/verilog/sesion_03/svg/or.svg
 ---
 name: fig-verilog-en-03-or
 alt: Truth table and symbol of the OR gate
-width: 85%
+class: verilog-svg
+width: 80%
 align: center
 ---
 OR gate.
@@ -141,11 +144,12 @@ or o1(salida,a,b);
 
 ### NOT gate · `not(salida,a)`
 
-```{figure} ../../_static/verilog/sesion_03/not.png
+```{figure} ../../_static/verilog/sesion_03/svg/not.svg
 ---
 name: fig-verilog-en-03-not
 alt: Truth table and symbol of the NOT gate
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 NOT gate.
@@ -160,21 +164,23 @@ not n1(salida,a);
 
 ### NAND gate · `nand(salida,a,b)` and NOR gate · `nor(salida,a,b)`
 
-```{figure} ../../_static/verilog/sesion_03/nand.png
+```{figure} ../../_static/verilog/sesion_03/svg/nand.svg
 ---
 name: fig-verilog-en-03-nand
 alt: Truth table and symbol of the NAND gate
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 NAND gate.
 ```
 
-```{figure} ../../_static/verilog/sesion_03/nor.png
+```{figure} ../../_static/verilog/sesion_03/svg/nor.svg
 ---
 name: fig-verilog-en-03-nor
 alt: Truth table and symbol of the NOR gate
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 NOR gate.
@@ -190,21 +196,23 @@ nor  no1(salidaNor,a,b);
 
 ### XOR gate · `xor(salida,a,b)` and XNOR gate · `xnor(salida,a,b)`
 
-```{figure} ../../_static/verilog/sesion_03/xor.png
+```{figure} ../../_static/verilog/sesion_03/svg/xor.svg
 ---
 name: fig-verilog-en-03-xor
 alt: Truth table and symbol of the XOR gate
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 XOR gate.
 ```
 
-```{figure} ../../_static/verilog/sesion_03/xnor.png
+```{figure} ../../_static/verilog/sesion_03/svg/xnor.svg
 ---
 name: fig-verilog-en-03-xnor
 alt: Truth table and symbol of the XNOR gate
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 XNOR gate.
@@ -220,11 +228,12 @@ xnor xn1(salidaXnor,a,b);
 
 ### BUFFER gate · `buf(salida,a)`
 
-```{figure} ../../_static/verilog/sesion_03/buf.png
+```{figure} ../../_static/verilog/sesion_03/svg/buf.svg
 ---
 name: fig-verilog-en-03-buf
 alt: Truth table and symbol of the BUFFER gate
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 BUFFER gate.
@@ -255,11 +264,12 @@ Declare a different output wire for each gate (`salidaAnd`, `salidaOr`, ...) and
 
 We will build the truth table of the logic function $f_2(a,b,c) = ab + c$ with the help of Verilog.
 
-```{figure} ../../_static/verilog/sesion_03/f2.png
+```{figure} ../../_static/verilog/sesion_03/svg/f2.svg
 ---
 name: fig-verilog-en-03-f2
 alt: Circuit for f2 made of an AND gate of a and b whose output goes, together with c, into an OR gate
-width: 60%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Circuit for $f_2(a,b,c) = ab + c$.
@@ -306,11 +316,12 @@ Each value of register `r` corresponds to one input combination:
 
 An auxiliary wire `ab` connects the output of AND gate `a1` to one input of OR gate `o1`.
 
-```{figure} ../../_static/verilog/sesion_03/f2var.png
+```{figure} ../../_static/verilog/sesion_03/svg/f2var.svg
 ---
 name: fig-verilog-en-03-f2var
 alt: Circuit for f2 with the Verilog names r[2], r[1], r[0], a1, ab, o1 and salida
-width: 55%
+class: verilog-svg
+width: 80%
 align: center
 ---
 The same circuit with the names used in the program: the auxiliary wire `ab` joins `a1` and `o1`.
@@ -318,15 +329,16 @@ The same circuit with the names used in the program: the auxiliary wire `ab` joi
 
 The result of running it matches the table from the theory lectures:
 
-```{figure} ../../_static/verilog/sesion_03/tablaf2.png
----
-name: fig-verilog-en-03-tablaf2
-alt: Truth table of f2 with columns a, b, c, ab and f2
-width: 25%
-align: center
----
-Truth table of $f_2$ from the theory lectures.
-```
+| a | b | c | ab | $f_2$ |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | **0** |
+| 0 | 0 | 1 | 0 | **1** |
+| 0 | 1 | 0 | 0 | **0** |
+| 0 | 1 | 1 | 0 | **1** |
+| 1 | 0 | 0 | 0 | **0** |
+| 1 | 0 | 1 | 0 | **1** |
+| 1 | 1 | 0 | 1 | **1** |
+| 1 | 1 | 1 | 1 | **1** |
 
 ```text
                      a b c | f2
@@ -396,21 +408,16 @@ if (a<=0 || b==4) ...
 Build the truth table of function $f_3$ from the theory lectures, whose gate diagram is shown below:
 ```
 
-```{figure} ../../_static/verilog/sesion_03/f3for.png
----
-name: fig-verilog-en-03-f3for
-alt: Expression f3(a,b,c) = bc + ab not c + not b c + c
-width: 45%
-align: center
----
-Expression of function $f_3$.
-```
+$$
+f_3(a,b,c) = bc + ab\overline{c} + \overline{b}c + c
+$$
 
-```{figure} ../../_static/verilog/sesion_03/f3.png
+```{figure} ../../_static/verilog/sesion_03/svg/f3.svg
 ---
 name: fig-verilog-en-03-f3
 alt: Gate diagram of f3 with two inverters, four AND gates and three OR gates
-width: 65%
+class: verilog-svg
+width: 100%
 align: center
 ---
 Gate diagram of $f_3(a,b,c) = bc + ab\overline{c} + \overline{b}c + c$.
@@ -430,11 +437,12 @@ Follow the same scheme as for $f_2$: a register `reg [2:0] r` for the inputs and
 Check, with a Verilog program, that function $f_3$ is equivalent to this other one built only with NAND gates:
 ```
 
-```{figure} ../../_static/verilog/sesion_03/f3nand.png
+```{figure} ../../_static/verilog/sesion_03/svg/f3nand.svg
 ---
 name: fig-verilog-en-03-f3nand
 alt: Circuit for f3 with three NAND gates
-width: 50%
+class: verilog-svg
+width: 80%
 align: center
 ---
 $f_3$ implemented with NAND gates only.

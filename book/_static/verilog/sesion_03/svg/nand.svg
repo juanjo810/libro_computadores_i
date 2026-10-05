@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 172" width="470" height="172" role="img">
+<title>Puerta NAND: simbolo y tabla de verdad</title>
+<rect x="1" y="1" width="468" height="170" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+<text x="22" y="36" font-family="Inter,'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="17" fill="#1E293B" text-anchor="start" font-weight="bold">NAND</text>
+<text x="22" y="56" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="start" font-weight="normal">nand(salida,a,b)</text>
+<polyline points="44,84.0 92.0,84.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="30" y="89.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="middle" font-weight="normal">a</text>
+<polyline points="44,112.0 92.0,112.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="30" y="117.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="middle" font-weight="normal">b</text>
+<path d="M92.0,70.0 H122.8 A28.0,28.0 0 0 1 122.8,126.0 H92.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="155.6" cy="98.0" r="4.8" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="160.3,98.0 186.3,98.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="194.3" y="103.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#00876F" text-anchor="start" font-weight="bold"><tspan text-decoration="overline">a·b</tspan></text>
+<rect x="310" y="20.0" width="138" height="132" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<path d="M310,48.0 V28.0 Q310,20.0 318,20.0 H440 Q448,20.0 448,28.0 V48.0 Z" fill="#EEF2F7"/>
+<polyline points="382,20.0 382,152.0" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="310,48.0 448,48.0" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="328.0" y="39.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">a</text>
+<text x="364.0" y="39.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">b</text>
+<text x="415.0" y="39.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">NAND</text>
+<text x="328.0" y="66.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<text x="364.0" y="66.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<rect x="403.0" y="52.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="415.0" y="66.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<polyline points="316,74.0 442,74.0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="328.0" y="92.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<rect x="352.0" y="78.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="364.0" y="92.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<rect x="403.0" y="78.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="415.0" y="92.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<polyline points="316,100.0 442,100.0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="316.0" y="104.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="328.0" y="118.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<text x="364.0" y="118.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<rect x="403.0" y="104.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="415.0" y="118.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<polyline points="316,126.0 442,126.0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="316.0" y="130.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="328.0" y="144.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<rect x="352.0" y="130.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="364.0" y="144.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<text x="415.0" y="144.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="bold">0</text>
+</svg>

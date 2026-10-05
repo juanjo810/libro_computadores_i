@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" width="560" height="200" role="img">
+<title>f3 solo con puertas NAND</title>
+<path d="M110.0,30.0 H140.8 A28.0,28.0 0 0 1 140.8,86.0 H110.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="173.6" cy="58.0" r="4.8" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<path d="M160.0,110.0 H190.8 A28.0,28.0 0 0 1 190.8,166.0 H160.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="223.6" cy="138.0" r="4.8" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<path d="M360.0,60.0 H390.8 A28.0,28.0 0 0 1 390.8,116.0 H360.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="423.6" cy="88.0" r="4.8" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="60,44.0 110.0,44.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="49.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="end" font-weight="normal">a</text>
+<polyline points="60,72.0 110.0,72.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="77.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="end" font-weight="normal">b</text>
+<polyline points="60,138.0 130,138.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="143.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="end" font-weight="normal">c</text>
+<polyline points="130,124.0 130,152.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="130" cy="138.0" r="3.5" fill="#1E293B"/>
+<polyline points="130,124.0 160.0,124.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="130,152.0 160.0,152.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="178.3,58.0 320,58.0 320,74.0 360.0,74.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="228.3,138.0 320,138.0 320,102.0 360.0,102.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="192.3" y="48.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="start" font-weight="normal"><tspan text-decoration="overline">a·b</tspan></text>
+<text x="242.3" y="162.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="start" font-weight="normal"><tspan text-decoration="overline">c</tspan></text>
+<polyline points="428.3,88.0 478.3,88.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M469.3,83.0 L478.3,88.0 L469.3,93.0 Z" fill="#1E293B"/>
+<text x="488.3" y="94.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="17" fill="#00876F" text-anchor="start" font-weight="bold">f<tspan baseline-shift="sub" font-size="11">3</tspan></text>
+</svg>

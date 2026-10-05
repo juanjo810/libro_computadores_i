@@ -16,14 +16,15 @@ Tercera sesión de prácticas. Comprobaremos con Verilog el funcionamiento de la
 
 Recordemos de la parte de teoría el comportamiento de una puerta AND:
 
-```{figure} ../../_static/verilog/sesion_03/and.png
+```{figure} ../../_static/verilog/sesion_03/svg/and.svg
 ---
 name: fig-verilog-03-and
 alt: Tabla de verdad y símbolo de la puerta AND
-width: 85%
+class: verilog-svg
+width: 80%
 align: center
 ---
-Puerta AND: tabla de verdad, equivalencia con FALSE/TRUE y símbolo.
+Puerta AND: símbolo, expresión y tabla de verdad.
 ```
 
 Vamos a comprobar, con Verilog, el funcionamiento de esta puerta:
@@ -55,11 +56,12 @@ En el programa definimos dos **registros** `a` y `b` que van a proporcionar el v
 
 La propia puerta se crea (se **instancia**) a continuación y se le da el nombre de `a1`. En las puertas básicas de Verilog, indicar un nombre es opcional. Los nombres se usan para poder hacer referencia a los elementos creados. En la misma línea en que se crea la puerta, se conectan sus entradas y salidas a las variables antes definidas.
 
-```{figure} ../../_static/verilog/sesion_03/andvar.png
+```{figure} ../../_static/verilog/sesion_03/svg/andvar.svg
 ---
 name: fig-verilog-03-andvar
 alt: Instancia a1 de una puerta AND con entradas a y b y salida salida
-width: 35%
+class: verilog-svg
+width: 70%
 align: center
 ---
 Instancia `and a1(salida,a,b);`: el primer argumento es la salida (un `wire`) y los siguientes, las entradas (los `reg` `a` y `b`).
@@ -122,11 +124,12 @@ Recordemos algunas otras puertas vistas en teoría y cómo se expresan en Verilo
 
 ### Puerta OR · `or(salida,a,b)`
 
-```{figure} ../../_static/verilog/sesion_03/or.png
+```{figure} ../../_static/verilog/sesion_03/svg/or.svg
 ---
 name: fig-verilog-03-or
 alt: Tabla de verdad y símbolo de la puerta OR
-width: 85%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Puerta OR.
@@ -141,11 +144,12 @@ or o1(salida,a,b);
 
 ### Puerta NOT · `not(salida,a)`
 
-```{figure} ../../_static/verilog/sesion_03/not.png
+```{figure} ../../_static/verilog/sesion_03/svg/not.svg
 ---
 name: fig-verilog-03-not
 alt: Tabla de verdad y símbolo de la puerta NOT
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Puerta NOT.
@@ -160,21 +164,23 @@ not n1(salida,a);
 
 ### Puertas NAND · `nand(salida,a,b)` y NOR · `nor(salida,a,b)`
 
-```{figure} ../../_static/verilog/sesion_03/nand.png
+```{figure} ../../_static/verilog/sesion_03/svg/nand.svg
 ---
 name: fig-verilog-03-nand
 alt: Tabla de verdad y símbolo de la puerta NAND
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Puerta NAND.
 ```
 
-```{figure} ../../_static/verilog/sesion_03/nor.png
+```{figure} ../../_static/verilog/sesion_03/svg/nor.svg
 ---
 name: fig-verilog-03-nor
 alt: Tabla de verdad y símbolo de la puerta NOR
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Puerta NOR.
@@ -190,21 +196,23 @@ nor  no1(salidaNor,a,b);
 
 ### Puertas XOR · `xor(salida,a,b)` y XNOR · `xnor(salida,a,b)`
 
-```{figure} ../../_static/verilog/sesion_03/xor.png
+```{figure} ../../_static/verilog/sesion_03/svg/xor.svg
 ---
 name: fig-verilog-03-xor
 alt: Tabla de verdad y símbolo de la puerta XOR
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Puerta XOR.
 ```
 
-```{figure} ../../_static/verilog/sesion_03/xnor.png
+```{figure} ../../_static/verilog/sesion_03/svg/xnor.svg
 ---
 name: fig-verilog-03-xnor
 alt: Tabla de verdad y símbolo de la puerta XNOR
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Puerta XNOR.
@@ -220,11 +228,12 @@ xnor xn1(salidaXnor,a,b);
 
 ### Puerta BUFFER · `buf(salida,a)`
 
-```{figure} ../../_static/verilog/sesion_03/buf.png
+```{figure} ../../_static/verilog/sesion_03/svg/buf.svg
 ---
 name: fig-verilog-03-buf
 alt: Tabla de verdad y símbolo de la puerta BUFFER
-width: 70%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Puerta BUFFER.
@@ -255,11 +264,12 @@ Declarad un cable de salida distinto para cada puerta (`salidaAnd`, `salidaOr`, 
 
 Vamos a construir la tabla de verdad de la función lógica $f_2(a,b,c) = ab + c$ con la ayuda de Verilog.
 
-```{figure} ../../_static/verilog/sesion_03/f2.png
+```{figure} ../../_static/verilog/sesion_03/svg/f2.svg
 ---
 name: fig-verilog-03-f2
 alt: Circuito de f2 formado por una puerta AND de a y b cuya salida entra, junto con c, en una puerta OR
-width: 60%
+class: verilog-svg
+width: 80%
 align: center
 ---
 Circuito de $f_2(a,b,c) = ab + c$.
@@ -306,11 +316,12 @@ Cada valor del registro `r` corresponde a una combinación de las entradas:
 
 Se ha usado un cable auxiliar `ab` para conectar la salida de la puerta AND `a1` con una entrada de la puerta OR `o1`.
 
-```{figure} ../../_static/verilog/sesion_03/f2var.png
+```{figure} ../../_static/verilog/sesion_03/svg/f2var.svg
 ---
 name: fig-verilog-03-f2var
 alt: Circuito de f2 con los nombres de Verilog r[2], r[1], r[0], a1, ab, o1 y salida
-width: 55%
+class: verilog-svg
+width: 80%
 align: center
 ---
 El mismo circuito con los nombres usados en el programa: el cable auxiliar `ab` une `a1` con `o1`.
@@ -318,15 +329,16 @@ El mismo circuito con los nombres usados en el programa: el cable auxiliar `ab` 
 
 El resultado de su ejecución coincide con la tabla vista en teoría:
 
-```{figure} ../../_static/verilog/sesion_03/tablaf2.png
----
-name: fig-verilog-03-tablaf2
-alt: Tabla de verdad de f2 con las columnas a, b, c, ab y f2
-width: 25%
-align: center
----
-Tabla de verdad de $f_2$ vista en teoría.
-```
+| a | b | c | ab | $f_2$ |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | **0** |
+| 0 | 0 | 1 | 0 | **1** |
+| 0 | 1 | 0 | 0 | **0** |
+| 0 | 1 | 1 | 0 | **1** |
+| 1 | 0 | 0 | 0 | **0** |
+| 1 | 0 | 1 | 0 | **1** |
+| 1 | 1 | 0 | 1 | **1** |
+| 1 | 1 | 1 | 1 | **1** |
 
 ```text
                      a b c | f2
@@ -396,21 +408,16 @@ if (a<=0 || b==4) ...
 Constrúyase la tabla de verdad de la función $f_3$ vista en teoría y cuyo diagrama con puertas es el que se muestra a continuación:
 ```
 
-```{figure} ../../_static/verilog/sesion_03/f3for.png
----
-name: fig-verilog-03-f3for
-alt: Expresión de f3(a,b,c) = bc + ab c negada + b negada c + c
-width: 45%
-align: center
----
-Expresión de la función $f_3$.
-```
+$$
+f_3(a,b,c) = bc + ab\overline{c} + \overline{b}c + c
+$$
 
-```{figure} ../../_static/verilog/sesion_03/f3.png
+```{figure} ../../_static/verilog/sesion_03/svg/f3.svg
 ---
 name: fig-verilog-03-f3
 alt: Diagrama de f3 con dos inversores, cuatro puertas AND y tres puertas OR
-width: 65%
+class: verilog-svg
+width: 100%
 align: center
 ---
 Diagrama con puertas de $f_3(a,b,c) = bc + ab\overline{c} + \overline{b}c + c$.
@@ -430,11 +437,12 @@ Seguid el mismo esquema que en $f_2$: un registro `reg [2:0] r` para las entrada
 Comprobad, mediante un programa Verilog, que la función $f_3$ es equivalente a esta otra elaborada solamente con puertas NAND:
 ```
 
-```{figure} ../../_static/verilog/sesion_03/f3nand.png
+```{figure} ../../_static/verilog/sesion_03/svg/f3nand.svg
 ---
 name: fig-verilog-03-f3nand
 alt: Circuito de f3 con tres puertas NAND
-width: 50%
+class: verilog-svg
+width: 80%
 align: center
 ---
 $f_3$ implementada solo con puertas NAND.

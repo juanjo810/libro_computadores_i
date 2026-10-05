@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 168" width="470" height="168" role="img">
+<title>Puerta NOT: simbolo y tabla de verdad</title>
+<rect x="1" y="1" width="468" height="166" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+<text x="22" y="36" font-family="Inter,'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="17" fill="#1E293B" text-anchor="start" font-weight="bold">NOT</text>
+<text x="22" y="56" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="start" font-weight="normal">not(salida,a)</text>
+<polyline points="44,96.0 92.0,96.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="30" y="101.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="middle" font-weight="normal">a</text>
+<path d="M92.0,71.4 L142.4,96.0 L92.0,120.6 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="147.2" cy="96.0" r="4.8" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="151.9,96.0 177.9,96.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="185.9" y="101.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#00876F" text-anchor="start" font-weight="bold"><tspan text-decoration="overline">a</tspan></text>
+<rect x="348" y="44.0" width="100" height="80" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<path d="M348,72.0 V52.0 Q348,44.0 356,44.0 H440 Q448,44.0 448,52.0 V72.0 Z" fill="#EEF2F7"/>
+<polyline points="384,44.0 384,124.0" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="348,72.0 448,72.0" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="366.0" y="63.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">a</text>
+<text x="416.0" y="63.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">NOT</text>
+<text x="366.0" y="90.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<rect x="404.0" y="76.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="416.0" y="90.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<polyline points="354,98.0 442,98.0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="354.0" y="102.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="366.0" y="116.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<text x="416.0" y="116.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="bold">0</text>
+</svg>

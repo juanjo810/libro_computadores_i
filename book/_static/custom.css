@@ -289,3 +289,9 @@ html.opendyslexic-mode code {
 .teachbook-a11y-btn.active {
     color: var(--pst-color-link) !important;
 }
+
+/* Figuras SVG de Verilog (puertas y circuitos): en modo oscuro se invierten
+   para mantener el contraste sin duplicar las imagenes. */
+html[data-theme="dark"] img.verilog-svg {
+    filter: invert(0.9) hue-rotate(180deg);
+}

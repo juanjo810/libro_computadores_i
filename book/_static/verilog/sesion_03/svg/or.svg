@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 172" width="470" height="172" role="img">
+<title>Puerta OR: simbolo y tabla de verdad</title>
+<rect x="1" y="1" width="468" height="170" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+<text x="22" y="36" font-family="Inter,'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="17" fill="#1E293B" text-anchor="start" font-weight="bold">OR</text>
+<text x="22" y="56" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="start" font-weight="normal">or(salida,a,b)</text>
+<polyline points="44,84.0 98.3,84.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="30" y="89.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="middle" font-weight="normal">a</text>
+<polyline points="44,112.0 98.3,112.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="30" y="117.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="middle" font-weight="normal">b</text>
+<path d="M92.0,70.0 Q108.8,98.0 92.0,126.0 Q134.0,126.0 156.4,98.0 Q134.0,70.0 92.0,70.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="156.4,98.0 182.4,98.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="190.4" y="103.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#00876F" text-anchor="start" font-weight="bold">a+b</text>
+<rect x="312" y="20.0" width="136" height="132" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<path d="M312,48.0 V28.0 Q312,20.0 320,20.0 H440 Q448,20.0 448,28.0 V48.0 Z" fill="#EEF2F7"/>
+<polyline points="384,20.0 384,152.0" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="312,48.0 448,48.0" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="330.0" y="39.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">a</text>
+<text x="366.0" y="39.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">b</text>
+<text x="416.0" y="39.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="bold">OR</text>
+<text x="330.0" y="66.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<text x="366.0" y="66.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<text x="416.0" y="66.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="bold">0</text>
+<polyline points="318,74.0 442,74.0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="330.0" y="92.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<rect x="354.0" y="78.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="366.0" y="92.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<rect x="404.0" y="78.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="416.0" y="92.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<polyline points="318,100.0 442,100.0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="318.0" y="104.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="330.0" y="118.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<text x="366.0" y="118.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="middle" font-weight="normal">0</text>
+<rect x="404.0" y="104.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="416.0" y="118.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<polyline points="318,126.0 442,126.0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="318.0" y="130.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="330.0" y="144.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<rect x="354.0" y="130.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="366.0" y="144.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+<rect x="404.0" y="130.0" width="24" height="18" rx="5" fill="#D9F2EC"/>
+<text x="416.0" y="144.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#00876F" text-anchor="middle" font-weight="bold">1</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 150" width="440" height="150" role="img">
+<title>Instancia and a1(salida,a,b)</title>
+<path d="M170.0,40.0 H205.2 A32.0,32.0 0 0 1 205.2,104.0 H170.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<text x="196.9" y="76.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="middle" font-weight="bold">a1</text>
+<polyline points="70,56.0 170.0,56.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="34" y="43.0" width="34" height="26" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="51" y="61.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="middle" font-weight="normal">a</text>
+<polyline points="70,88.0 170.0,88.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="34" y="75.0" width="34" height="26" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="51" y="93.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="middle" font-weight="normal">b</text>
+<polyline points="237.2,72.0 330,72.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M321,67.0 L330,72.0 L321,77.0 Z" fill="#1E293B"/>
+<text x="340" y="77.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="start" font-weight="normal">salida</text>
+<text x="51" y="30" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="11" fill="#00876F" text-anchor="middle" font-weight="bold">reg</text>
+<text x="340" y="58.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="11" fill="#00876F" text-anchor="start" font-weight="bold">wire</text>
+<text x="220.0" y="138" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="middle" font-weight="normal">and a1( salida , a , b );</text>
+</svg>

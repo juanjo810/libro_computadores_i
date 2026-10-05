@@ -1,6 +1,0 @@
-@startuml
-[Web App] --> [API]
-[API] --> [Service Layer]
-[Service Layer] --> [PostgreSQL]
-[Service Layer] --> [Redis]
-@enduml
