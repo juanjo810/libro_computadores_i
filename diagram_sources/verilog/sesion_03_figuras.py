@@ -129,8 +129,10 @@ def gate(kind, x, y, h=60, n_in=2, label=None):
 
     if n_in == 1:
         vs = [0.5]
-    else:
+    elif n_in == 2:
         vs = [0.25, 0.75]
+    else:
+        vs = [(i + 0.5) / n_in for i in range(n_in)]
     ins = [(round(x + in_u(v) * h, 1), round(y + v * h, 1)) for v in vs]
     out = (round(x + out_u * h, 1), round(y + 0.5 * h, 1))
     return "\n".join(parts), ins, out

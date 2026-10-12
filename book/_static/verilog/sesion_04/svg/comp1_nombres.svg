@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 312" width="580" height="312" role="img">
+<title>Comparador de un bit con los nombres de Verilog</title>
+<rect x="80" y="20" width="380" height="266" rx="10" fill="none" stroke="#64748B" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M250.0,30.0 H277.5 A25.0,25.0 0 0 1 277.5,80.0 H250.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M250.0,220.0 H277.5 A25.0,25.0 0 0 1 277.5,270.0 H250.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M130.0,93.7 L155.2,106.0 L130.0,118.3 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="157.6" cy="106.0" r="2.4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<path d="M130.0,171.7 L155.2,184.0 L130.0,196.3 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="157.6" cy="184.0" r="2.4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<path d="M350.0,125.0 Q365.0,150.0 350.0,175.0 Q387.5,175.0 407.5,150.0 Q387.5,125.0 350.0,125.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="411.8" cy="150.0" r="4.2" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<text x="375.0" y="154.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="middle" font-weight="bold">n</text>
+<polyline points="30,42.5 250.0,42.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="30,257.5 250.0,257.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="22" y="48.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="17" fill="#1E293B" text-anchor="end" font-weight="normal">a</text>
+<text x="22" y="263.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="17" fill="#1E293B" text-anchor="end" font-weight="normal">b</text>
+<polyline points="105,42.5 105,106.0 130.0,106.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="105" cy="42.5" r="3.5" fill="#1E293B"/>
+<polyline points="105,257.5 105,184.0 130.0,184.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="105" cy="257.5" r="3.5" fill="#1E293B"/>
+<polyline points="160.0,106.0 222,106.0 222,232.5 250.0,232.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="160.0,184.0 202,184.0 202,67.5 250.0,67.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="302.5,55.0 520,55.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="302.5,245.0 520,245.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="325,55.0 325,137.5 355.6,137.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="325" cy="55.0" r="3.5" fill="#1E293B"/>
+<polyline points="325,245.0 325,162.5 355.6,162.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="325" cy="245.0" r="3.5" fill="#1E293B"/>
+<polyline points="416.0,150.0 520,150.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M511,50.0 L520,55.0 L511,60.0 Z" fill="#1E293B"/>
+<text x="528" y="60.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="start" font-weight="bold">a&gt;b</text>
+<path d="M511,145.0 L520,150.0 L511,155.0 Z" fill="#1E293B"/>
+<text x="528" y="155.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="start" font-weight="bold">a=b</text>
+<path d="M511,240.0 L520,245.0 L511,250.0 Z" fill="#1E293B"/>
+<text x="528" y="250.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="15" fill="#1E293B" text-anchor="start" font-weight="bold">a&lt;b</text>
+<text x="275" y="13" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#2563EB" text-anchor="middle" font-weight="bold">aArriba</text>
+<text x="275" y="306" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#2563EB" text-anchor="middle" font-weight="bold">aAbajo</text>
+<text x="143" y="134" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#2563EB" text-anchor="middle" font-weight="bold">nArriba</text>
+<text x="143" y="164" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#2563EB" text-anchor="middle" font-weight="bold">nAbajo</text>
+<text x="228" y="98.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="start" font-weight="bold">wArriba</text>
+<text x="196" y="202.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="end" font-weight="bold">wAbajo</text>
+<text x="92" y="34.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="start" font-weight="bold">a</text>
+<text x="92" y="249.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="start" font-weight="bold">b</text>
+<text x="452" y="47.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="end" font-weight="bold">mayor</text>
+<text x="452" y="142.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="end" font-weight="bold">igual</text>
+<text x="452" y="237.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#00876F" text-anchor="end" font-weight="bold">menor</text>
+</svg>

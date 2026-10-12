@@ -9,7 +9,6 @@ Third lab session. We will use Verilog to check how the logic gates seen in the 
 - Follow a simulation with `$monitor` and `$time`.
 - Check truth tables with the values `0`, `1`, `x` and `z`.
 - Connect several gates through auxiliary wires to build logic functions.
-- Use Verilog relational and logical operators.
 ```
 
 ## AND gate
@@ -351,53 +350,6 @@ The result of running it matches the table from the theory lectures:
                   25 1 0 1 | 1
                   30 1 1 0 | 1
                   35 1 1 1 | 1
-```
-
-## Relational operators
-
-Besides `!=`, already seen, Verilog supports the following relational operators:
-
-| Operator | Meaning |
-|:---:|---|
-| `<` | less than |
-| `<=` | less than or equal to |
-| `==` | equal to |
-| `!=` | not equal to |
-| `>=` | greater than or equal to |
-| `>` | greater than |
-| `===` | case equality (takes `x` and `z` into account) |
-| `!==` | case inequality (takes `x` and `z` into account) |
-
-When any operand contains `x` or `z`, the result is `x`. Otherwise, the result is 1 if the condition holds and 0 if it does not.
-
-For a strict equality comparison (taking `x`s and `z`s into account) use `===` (case equality) and `!==` (case inequality).
-
-## Logical operators
-
-To express a condition inside a Verilog program we sometimes need the logical operators AND, OR and NOT. In Verilog they are written as:
-
-| Operator | Meaning |
-|:---:|---|
-| `&&` | AND |
-| `\|\|` | OR |
-| `!` | NOT |
-
-So, to express something like *"If it is not the case that a is greater than zero and b is different from four..."*, we would write:
-
-```verilog
-if (!(a>0 && b!=4)) ...
-```
-
-Applying De Morgan's laws, we know the same condition can be written as:
-
-```verilog
-if (a<=0 || b==4) ...
-```
-
-```{admonition} Do not mix up logical and bitwise operators
-:class: warning
-
-`&&`, `||` and `!` are **logical** operators: they return a single truth value. `&`, `|` and `~`, seen in session 2, operate **bit by bit** on registers.
 ```
 
 ## Exercise 3

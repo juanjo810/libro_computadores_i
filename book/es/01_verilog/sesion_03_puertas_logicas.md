@@ -9,7 +9,6 @@ Tercera sesión de prácticas. Comprobaremos con Verilog el funcionamiento de la
 - Seguir la evolución de una simulación con `$monitor` y `$time`.
 - Comprobar tablas de verdad con los valores `0`, `1`, `x` y `z`.
 - Conectar varias puertas mediante cables auxiliares para construir funciones lógicas.
-- Usar los operadores relacionales y lógicos de Verilog.
 ```
 
 ## Puerta AND
@@ -351,53 +350,6 @@ El resultado de su ejecución coincide con la tabla vista en teoría:
                   25 1 0 1 | 1
                   30 1 1 0 | 1
                   35 1 1 1 | 1
-```
-
-## Operadores relacionales
-
-Además del ya visto `!=`, Verilog admite los siguientes operadores relacionales:
-
-| Operador | Significado |
-|:---:|---|
-| `<` | menor que |
-| `<=` | menor o igual que |
-| `==` | igual que |
-| `!=` | distinto de |
-| `>=` | mayor o igual que |
-| `>` | mayor que |
-| `===` | estrictamente igual (tiene en cuenta `x` y `z`) |
-| `!==` | estrictamente distinto (tiene en cuenta `x` y `z`) |
-
-Cuando alguno de los operandos contiene `x` o `z`, el resultado es `x`. En otro caso, el resultado dependerá de si se cumple la condición (1) o no (0).
-
-Si se desea una comparación de igualdad estricta (considerando las `x`s y las `z`s) se ha de usar `===` (estrictamente igual) y `!==` (estrictamente distinto).
-
-## Operadores lógicos
-
-Para expresar una condición dentro de un programa Verilog, a veces es necesario disponer de los operadores lógicos Y, O y NO. En Verilog se expresan como:
-
-| Operador | Significado |
-|:---:|---|
-| `&&` | Y |
-| `\|\|` | O |
-| `!` | NO |
-
-Así, para expresar algo como: *"Si no ocurre que a es mayor que cero y b distinto de cuatro..."*, lo haríamos con:
-
-```verilog
-if (!(a>0 && b!=4)) ...
-```
-
-Aplicando las leyes de De Morgan, ya sabemos que expresamos lo mismo con:
-
-```verilog
-if (a<=0 || b==4) ...
-```
-
-```{admonition} No confundir operadores lógicos y de bits
-:class: warning
-
-`&&`, `||` y `!` son operadores **lógicos**: devuelven un único valor de verdad. `&`, `|` y `~`, vistos en la sesión 2, operan **bit a bit** sobre los registros.
 ```
 
 ## Ejercicio 3
