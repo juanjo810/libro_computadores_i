@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 320" width="730" height="320" role="img">
+<title>Transceptor conectado al modulo de prueba</title>
+<rect x="160" y="20" width="400" height="280" rx="10" fill="none" stroke="#64748B" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M300.0,110.0 H324.2 A22.0,22.0 0 0 1 324.2,154.0 H300.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M300.0,40.0 H324.2 A22.0,22.0 0 0 1 324.2,84.0 H300.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="295.5" cy="51.0" r="4.5" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="110,51.0 291.0,51.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="295.5" cy="121.0" r="4.5" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="250,51.0 250,121.0 291.0,121.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="250" cy="51.0" r="3.5" fill="#1E293B"/>
+<polyline points="110,143.0 300.0,143.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="295.5" cy="73.0" r="4.5" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="270,143.0 270,73.0 291.0,73.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="270" cy="143.0" r="3.5" fill="#1E293B"/>
+<path d="M390,248.8 L417.0,262.0 L390,275.2 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M467.0,186.8 L440,200.0 L467.0,213.2 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="110,262 390,262.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="330" cy="262" r="3.5" fill="#1E293B"/>
+<polyline points="417.0,262.0 520,262 520,200" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="520,200 467.0,200.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="520,200 650,200" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="520" cy="200" r="3.5" fill="#1E293B"/>
+<polyline points="440,200.0 330,200 330,262" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="346.2,132.0 370,132.0 370,222 403.5,222 403.5,255.4" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="346.2,62.0 453.5,62.0 453.5,193.4" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="166" y="44.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#00876F" text-anchor="start" font-weight="bold">g</text>
+<text x="166" y="136.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#00876F" text-anchor="start" font-weight="bold">dir</text>
+<text x="166" y="255" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#00876F" text-anchor="start" font-weight="bold">a</text>
+<text x="610" y="193" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#00876F" text-anchor="start" font-weight="bold">b</text>
+<text x="352.2" y="150.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="bold">sa1</text>
+<text x="352.2" y="54.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="bold">sa2</text>
+<rect x="48" y="38.0" width="46" height="26" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/><text x="71.0" y="56.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="middle" font-weight="normal">g</text>
+<rect x="48" y="130.0" width="46" height="26" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/><text x="71.0" y="148.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="middle" font-weight="normal">dir</text>
+<rect x="48" y="249" width="46" height="26" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/><text x="71.0" y="267" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="middle" font-weight="normal">ra</text>
+<polyline points="650,200 665,200" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="665" y="187" width="46" height="26" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/><text x="688.0" y="205" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="middle" font-weight="normal">rb</text>
+</svg>
