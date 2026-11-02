@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 220" width="820" height="220" role="img">
+<title>Detector de flanco de subida y su cronograma</title>
+<path d="M95.0,68.6 L118.4,80.0 L95.0,91.4 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="120.6" cy="80.0" r="2.2" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<path d="M200.0,66.0 H230.8 A28.0,28.0 0 0 1 230.8,122.0 H200.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="40,80 95.0,80.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="32" y="86" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="end" font-weight="normal">C</text>
+<circle cx="65" cy="80" r="3.5" fill="#1E293B"/>
+<polyline points="122.8,80.0 200.0,80.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="65,80 65,108.0 200.0,108.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="104" y="60" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="normal">#(1)</text>
+<text x="140" y="72" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#64748B" text-anchor="start" font-weight="normal">C<tspan baseline-shift="sub" font-size="10">nr</tspan></text>
+<polyline points="258.8,94.0 298.8,94.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="306.8" y="100.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#00876F" text-anchor="start" font-weight="bold">DET</text>
+<text x="428" y="50" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="end" font-weight="normal">C</text>
+<polyline points="440,50 451,50 462,50 462,24 473,24 484,24 495,24 506,24 506,50 517,50 528,50 539,50 550,50 550,24 561,24 572,24 583,24 594,24 594,50 605,50 616,50 627,50 638,50 638,24 649,24 660,24 671,24 682,24 682,50 693,50 704,50 715,50 726,50 726,24 737,24 748,24 759,24 770,24 770,50 781,50 792,50 803,50 814,50" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="428" y="125" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="end" font-weight="normal">C<tspan baseline-shift="sub" font-size="10">nr</tspan></text>
+<polyline points="440,99 451,99 462,99 473,99 473,125 484,125 495,125 506,125 517,125 517,99 528,99 539,99 550,99 561,99 561,125 572,125 583,125 594,125 605,125 605,99 616,99 627,99 638,99 649,99 649,125 660,125 671,125 682,125 693,125 693,99 704,99 715,99 726,99 737,99 737,125 748,125 759,125 770,125 781,125 781,99 792,99 803,99 814,99" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="428" y="200" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="end" font-weight="normal">DET</text>
+<polyline points="440,200 451,200 462,200 462,174 473,174 473,200 484,200 495,200 506,200 517,200 528,200 539,200 550,200 550,174 561,174 561,200 572,200 583,200 594,200 605,200 616,200 627,200 638,200 638,174 649,174 649,200 660,200 671,200 682,200 693,200 704,200 715,200 726,200 726,174 737,174 737,200 748,200 759,200 770,200 781,200 792,200 803,200 814,200" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

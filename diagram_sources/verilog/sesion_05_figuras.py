@@ -278,6 +278,56 @@ def fig_mux8x1():
     return svg_doc(w, h, "\n".join(b), "Multiplexor 8x1 a partir de dos multiplexores 4x1 con OE")
 
 
+def fig_mux4x1():
+    """Interior del multiplexor 4x1 con linea OE (pista del ejercicio 2)."""
+    w, h = 650, 460
+    b = []
+    gh, gx = 54, 210
+    xs1, xs0 = 110, 150
+    ybot = 420
+    # Entradas negadas de cada AND: (s1 negada, s0 negada)
+    negadas = [(True, True), (True, False), (False, True), (False, False)]
+    outs = []
+    tops = {}
+    for i, (n1, n0) in enumerate(negadas):
+        g, ins, out = gate("and", gx, 20 + i * 95, h=gh, n_in=3)
+        b.append(g)
+        outs.append(out)
+        b.append(wire((40, ins[0][1]), ins[0]))
+        b.append(sub("D", i, x=32, y=ins[0][1] + 5, anchor="end"))
+        for (xr, neg), pin in zip(((xs1, n1), (xs0, n0)), ins[1:]):
+            end = pin
+            if neg:
+                bub, end = bubble_in(pin)
+                b.append(bub)
+            b.append(wire((xr, pin[1]), end))
+            if i == 0:
+                tops[xr] = pin[1]
+            else:
+                b.append(dot(xr, pin[1]))
+    b.append(wire((xs1, tops[xs1]), (xs1, ybot)))
+    b.append(wire((xs0, tops[xs0]), (xs0, ybot)))
+    b.append(sub("s", 1, x=xs1, y=ybot + 22, anchor="middle"))
+    b.append(sub("s", 0, x=xs0, y=ybot + 22, anchor="middle"))
+    # OR de cuatro entradas
+    go, io, oo = gate("or", 420, 160, h=80, n_in=4)
+    b.append(go)
+    for out, pin, xr in zip(outs, io, (340, 320, 320, 340)):
+        b.append(wire(out, (xr, out[1]), (xr, pin[1]), pin))
+    # Bufer triestado con OE por debajo
+    bh = 30
+    bx, by = 545, oo[1] - bh / 2
+    tb, tin, tout, _ = tri_buf(bx, by, bh)
+    b.append(tb)
+    b.append(wire(oo, tin))
+    cx, cy = bx + 0.45 * bh, by + 0.72 * bh
+    b.append(wire((cx, cy), (cx, cy + 34)))
+    b.append(text(cx, cy + 52, "OE", size=15, anchor="middle"))
+    b.append(wire(tout, (tout[0] + 34, tout[1])))
+    b.append(text(tout[0] + 42, tout[1] + 6, "Y", size=16, color=ACCENT, weight="bold"))
+    return svg_doc(w, h, "\n".join(b), "Multiplexor 4x1 con linea de control de salida OE")
+
+
 # ---------------------------------------------------------- sumadores
 def ha_block(x, y, w=90, h=110, idx=None, terminals=True):
     b = [block(x, y, w, h, "HA", idx)]
@@ -381,6 +431,7 @@ def main():
         "trans_nombres.svg": fig_transceiver("nombres"),
         "trans_test.svg": fig_transceiver("test"),
         "mux8x1.svg": fig_mux8x1(),
+        "mux4x1.svg": fig_mux4x1(),
         "semisuma.svg": fig_semisuma(),
         "sumador1.svg": fig_sumador1(),
         "propaga4.svg": fig_propaga4(),

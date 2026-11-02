@@ -244,6 +244,23 @@ align: center
 8x1 multiplexer built from two 4x1 multiplexers with an OE line.
 ```
 
+````{admonition} Hint
+:class: dropdown
+
+If you cannot build the 4x1 multiplexer, you can look at this solution. There are similar alternatives to the one in the figure that use a decoder or tri-state buffers, for example.
+
+```{figure} ../../_static/verilog/sesion_05/svg/mux4x1.svg
+---
+name: fig-verilog-en-05-mux4x1
+alt: 4x1 multiplexer with four three-input AND gates, which combine each D with s1 and s0 plain or negated, a four-input OR gate and a tri-state buffer controlled by OE that drives output Y
+class: verilog-svg
+width: 80%
+align: center
+---
+4x1 multiplexer with output-enable control line OE.
+```
+````
+
 ## Exercise 3
 
 ```{admonition} Statement

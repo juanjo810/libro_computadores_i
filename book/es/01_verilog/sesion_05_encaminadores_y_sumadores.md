@@ -244,6 +244,23 @@ align: center
 Multiplexor 8x1 construido con dos multiplexores 4x1 con línea OE.
 ```
 
+````{admonition} Pista
+:class: dropdown
+
+Si no sois capaces de construir el multiplexor 4x1, podéis fijaros en esta solución. Hay alternativas similares a la solución de la figura que usan un decodificador o búferes triestado, por ejemplo.
+
+```{figure} ../../_static/verilog/sesion_05/svg/mux4x1.svg
+---
+name: fig-verilog-05-mux4x1
+alt: Multiplexor 4x1 con cuatro puertas AND de tres entradas, que combinan cada D con s1 y s0 directas o negadas, una puerta OR de cuatro entradas y un búfer triestado controlado por OE que da la salida Y
+class: verilog-svg
+width: 80%
+align: center
+---
+Multiplexor 4x1 con línea de control de salida OE.
+```
+````
+
 ## Ejercicio 3
 
 ```{admonition} Enunciado
