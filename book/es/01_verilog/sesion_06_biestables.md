@@ -142,6 +142,7 @@ Suponemos que para generar la señal de reloj hemos definido previamente un regi
 
 `always` es un bloque, del mismo tipo que el que ya hemos visto de `initial`. Si tiene que contener más de una instrucción, deben ir rodeadas por `begin` y `end`, como de costumbre.
 
+(verilog-06-always-condicionado)=
 ### Bloque always condicionado
 
 Se puede añadir al bloque `always` el nombre de una señal de modo que el bloque se ejecute siempre que esa señal cambie:

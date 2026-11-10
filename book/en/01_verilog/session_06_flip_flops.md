@@ -142,6 +142,7 @@ We assume that, to generate the clock signal, a register `C` has been defined be
 
 `always` is a block of the same kind as the `initial` block we already know. If it must contain more than one statement, they must be enclosed between `begin` and `end`, as usual.
 
+(verilog-en-06-conditional-always)=
 ### Conditional always block
 
 The name of a signal can be added to the `always` block so that the block runs whenever that signal changes:

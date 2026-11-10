@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" width="260" height="160" role="img">
+<title>Biestable D activo por flanco de bajada</title>
+<rect x="85" y="25" width="90" height="110" rx="6" fill="#EAF7F3" stroke="#1E293B" stroke-width="2"/>
+<polyline points="65,52.5 85,52.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="93" y="57.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">D</text>
+<polyline points="175,52.5 195,52.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="167" y="57.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="end" font-weight="normal">Q</text>
+<circle cx="80" cy="96.5" r="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="65,96.5 75,96.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M85,89.5 L95,96.5 L85,103.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<text x="100" y="101.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">C</text>
+</svg>

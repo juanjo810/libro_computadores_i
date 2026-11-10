@@ -131,12 +131,13 @@ def wave(x0, ybase, values, unit, amp=26, color=C_WAVE):
     return wire(*pts, color=color, width=2.2)
 
 
-def fig_detector():
+def fig_detector(kind="and"):
+    """Detector de flanco: con AND (subida, activo por nivel alto) o con OR (bajada, nivel bajo)."""
     w, h = 820, 220
     b = []
     yc = 80
     gn, inn, onn = gate("not", 95, yc - 13, h=26, n_in=1)
-    ga, ia, oa = gate("and", 200, yc - 14, h=56)
+    ga, ia, oa = gate(kind, 200, yc - 14, h=56)
     b += [gn, ga]
     b.append(wire((40, yc), inn[0]))
     b.append(text(32, yc + 6, "C", size=16, anchor="end"))
@@ -151,13 +152,14 @@ def fig_detector():
     unit, n = 11, 34
     clk = [1 if (t % 8) in (2, 3, 4, 5) else 0 for t in range(n)]
     cnr = [1 - clk[t - 1] if t >= 1 else 1 for t in range(n)]
-    det = [clk[t] & cnr[t] for t in range(n)]
+    det = [(clk[t] & cnr[t]) if kind == "and" else (clk[t] | cnr[t]) for t in range(n)]
     x0 = 440
     rows = ((50, clk, "C"), (125, cnr, subc("C", "nr", size=14)), (200, det, "DET"))
     for ybase, vals, lab in rows:
         b.append(text(x0 - 12, ybase, lab, size=14, anchor="end"))
         b.append(wave(x0, ybase, vals, unit))
-    return svg_doc(w, h, "\n".join(b), "Detector de flanco de subida y su cronograma")
+    title = "Detector de flanco de subida" if kind == "and" else "Detector de flanco con puerta OR"
+    return svg_doc(w, h, "\n".join(b), f"{title} y su cronograma")
 
 
 # ---------------------------------------------- JK con PRESET y CLEAR

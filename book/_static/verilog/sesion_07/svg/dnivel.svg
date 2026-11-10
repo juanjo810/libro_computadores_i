@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 210" width="470" height="210" role="img">
+<title>Biestable D activo por nivel alto</title>
+<rect x="80" y="18" width="305" height="178" rx="10" fill="none" stroke="#64748B" stroke-width="1.6" stroke-dasharray="7 5"/>
+<path d="M180.0,36.0 H206.4 A24.0,24.0 0 0 1 206.4,84.0 H180.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M180.0,116.0 H206.4 A24.0,24.0 0 0 1 206.4,164.0 H180.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M275.0,101.0 Q290.6,127.0 275.0,153.0 Q314.0,153.0 334.8,127.0 Q314.0,101.0 275.0,101.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="230.4,60.0 252,60.0 252,114.0 280.9,114.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="230.4,140.0 280.9,140.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="334.8,127.0 420,127.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="360" cy="127.0" r="3.5" fill="#1E293B"/>
+<polyline points="360,127.0 360,180 150,180 150,152.0 180.0,152.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="40,48.0 180.0,48.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="105" cy="128.0" r="3.5" fill="#1E293B"/>
+<path d="M118.0,118.3 L137.8,128.0 L118.0,137.7 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="139.7" cy="128.0" r="1.9" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="40,128.0 118.0,128.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="105,128.0 105,72.0 180.0,72.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="141.5,128.0 180.0,128.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="32" y="54.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="end" font-weight="normal">D</text>
+<text x="32" y="134.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="end" font-weight="normal">C</text>
+<text x="428" y="133.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#00876F" text-anchor="start" font-weight="bold">Q</text>
+</svg>
