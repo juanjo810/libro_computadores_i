@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 510" width="610" height="510" role="img">
+<title>Biestable T con linea de HOLD</title>
+<rect x="70" y="20" width="360" height="170" rx="6" fill="#EAF7F3" stroke="#1E293B" stroke-width="2"/>
+<text x="250.0" y="48" font-family="Inter,'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="22" fill="#1E293B" text-anchor="middle" font-weight="bold">T</text>
+<circle cx="65" cy="100" r="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="40,100 60,100" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M70,93 L80,100 L70,107" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<text x="85" y="105" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">C</text>
+<text x="32" y="106" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="end" font-weight="normal">C</text>
+<text x="422" y="75" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="end" font-weight="normal">Q</text>
+<text x="422" y="135" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="end" font-weight="normal">nQ</text>
+<text x="180" y="182" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="normal">nCLEAR</text>
+<text x="300" y="182" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="normal">nPRESET</text>
+<polyline points="430,70 545,70" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="553" y="76" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#00876F" text-anchor="start" font-weight="bold">Q</text>
+<circle cx="500" cy="70" r="3.5" fill="#1E293B"/>
+<polyline points="430,130 545,130" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="553" y="136" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#00876F" text-anchor="start" font-weight="bold">nQ</text>
+<circle cx="465" cy="130" r="3.5" fill="#1E293B"/>
+<g transform="translate(158,290) rotate(-90)"><path d="M0.0,0.0 H24.2 A22.0,22.0 0 0 1 24.2,44.0 H0.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/></g>
+<g transform="translate(278,290) rotate(-90)"><path d="M0.0,0.0 H24.2 A22.0,22.0 0 0 1 24.2,44.0 H0.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/></g>
+<polyline points="180.0,243.8 180,190" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="300.0,243.8 300,190" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="169.0,290.0 169.0,470" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="169.0" y="492" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="middle" font-weight="normal">nCLEAR</text>
+<polyline points="289.0,290.0 289.0,470" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="289.0" y="492" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="middle" font-weight="normal">nPRESET</text>
+<g transform="translate(440,330) scale(-1,1)"><path d="M0.0,0.0 Q13.2,22.0 0.0,44.0 Q33.0,44.0 50.6,22.0 Q33.0,0.0 0.0,0.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/></g>
+<g transform="translate(440,400) scale(-1,1)"><path d="M0.0,0.0 Q13.2,22.0 0.0,44.0 Q33.0,44.0 50.6,22.0 Q33.0,0.0 0.0,0.0 Z" fill="#EAF7F3" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/></g>
+<polyline points="389.4,352.0 311.0,352.0 311.0,290.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="389.4,422.0 191.0,422.0 191.0,290.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="465,130 465,341.0 435.1,341.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="500,70 500,411.0 435.1,411.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="480,470 480,363.0 435.1,363.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="480,433.0 435.1,433.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="480" cy="433.0" r="3.5" fill="#1E293B"/>
+<text x="480" y="492" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="14" fill="#1E293B" text-anchor="middle" font-weight="normal">nHOLD</text>
+</svg>

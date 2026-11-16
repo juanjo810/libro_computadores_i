@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 200" width="470" height="200" role="img">
+<title>Biestable T con lineas nCLEAR y nPRESET y salida nQ</title>
+<rect x="100" y="20" width="300" height="140" rx="6" fill="#EAF7F3" stroke="#1E293B" stroke-width="2"/>
+<text x="250.0" y="48" font-family="Inter,'Segoe UI','DejaVu Sans',Arial,sans-serif" font-size="22" fill="#1E293B" text-anchor="middle" font-weight="bold">T</text>
+<circle cx="95" cy="95" r="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="70,95 90,95" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M100,88 L110,95 L100,102" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<text x="115" y="100" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">C</text>
+<text x="62" y="101" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="end" font-weight="normal">C</text>
+<text x="392" y="70" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="end" font-weight="normal">Q</text>
+<text x="392" y="120" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="end" font-weight="normal">nQ</text>
+<text x="200" y="152" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="normal">nCLEAR</text>
+<text x="300" y="152" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="12" fill="#64748B" text-anchor="middle" font-weight="normal">nPRESET</text>
+<polyline points="400,65 430,65" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="400,115 430,115" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="200,160 200,190" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="300,160 300,190" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

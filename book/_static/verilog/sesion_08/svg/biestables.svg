@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 160" width="450" height="160" role="img">
+<title>Simbolos de los biestables T y JK</title>
+<rect x="90" y="25" width="80" height="110" rx="6" fill="#EAF7F3" stroke="#1E293B" stroke-width="2"/>
+<polyline points="170,52.5 190,52.5" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="162" y="57.5" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="end" font-weight="normal">Q</text>
+<circle cx="85" cy="80.0" r="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="70,80.0 80,80.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M90,73.0 L100,80.0 L90,87.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="85.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">T</text>
+<text x="62" y="86.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="16" fill="#1E293B" text-anchor="end" font-weight="normal">C</text>
+<rect x="300" y="25" width="90" height="110" rx="6" fill="#EAF7F3" stroke="#1E293B" stroke-width="2"/>
+<polyline points="280,47.0 300,47.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="308" y="52.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">J</text>
+<polyline points="280,113.0 300,113.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="308" y="118.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">K</text>
+<polyline points="390,47.0 410,47.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="382" y="52.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="end" font-weight="normal">Q</text>
+<polyline points="390,113.0 410,113.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="382" y="118.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="end" font-weight="normal"><tspan text-decoration="overline">Q</tspan></text>
+<circle cx="295" cy="80.0" r="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<polyline points="280,80.0 290,80.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M300,73.0 L310,80.0 L300,87.0" fill="none" stroke="#1E293B" stroke-width="2" stroke-linejoin="round"/>
+<text x="315" y="85.0" font-family="'JetBrains Mono','DejaVu Sans Mono',Consolas,Menlo,monospace" font-size="13" fill="#64748B" text-anchor="start" font-weight="normal">C</text>
+</svg>

@@ -19,7 +19,7 @@ OUT_DIR = Path(__file__).resolve().parents[2] / "book" / "_static" / "verilog" /
 
 
 # --------------------------------------------------------------- utilidades
-def ff(x, y, w, h, left, right, clk=None, clr=False, stub=20):
+def ff(x, y, w, h, left, right, clk=None, clr=False, stub=20, clk_label="C"):
     """Biestable con reloj por flanco de bajada y CLR opcional (activo por nivel bajo).
 
     left/right: listas de (etiqueta, fraccion_vertical); clk: fraccion de la
@@ -44,7 +44,7 @@ def ff(x, y, w, h, left, right, clk=None, clr=False, stub=20):
         b.append(wire((x - stub, yy), (x - 2 * r, yy)))
         b.append(f'<path d="M{x},{yy - 7} L{x + 10},{yy} L{x},{yy + 7}" fill="none" stroke="{INK}" '
                  f'stroke-width="2" stroke-linejoin="round"/>')
-        b.append(text(x + 15, yy + 5, "C", size=13, color=MUTED))
+        b.append(text(x + 15, yy + 5, clk_label, size=13, color=MUTED))
         pins["C"] = (x - stub, yy)
     if clr:
         cx = x + w / 2
