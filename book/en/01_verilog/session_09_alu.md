@@ -23,7 +23,7 @@ At any point, we can include another file, which will work just as if we had typ
 ```{admonition} Statement
 :class: note
 
-The file {download}`74181.v <../../_static/verilog/sesion_09/74181.v>` contains the Verilog code of the 74181 ALU seen in the theory lectures. Write a Verilog file with a module that carries out the following operations using that ALU:
+The file [`74181.v`](https://juanjo810.github.io/libro_computadores_i/_static/verilog/sesion_09/74181.v) contains the Verilog code of the 74181 ALU seen in the theory lectures. Write a Verilog file with a module that carries out the following operations using that ALU:
 
 1. 7+4
 2. 2+6+1

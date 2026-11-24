@@ -23,7 +23,7 @@ Se puede, en un punto cualquiera, incluir otro fichero que funcionará tal y com
 ```{admonition} Enunciado
 :class: note
 
-El fichero {download}`74181.v <../../_static/verilog/sesion_09/74181.v>` contiene el código Verilog de la ALU 74181 vista en teoría. Escríbase un fichero Verilog con un módulo que realice las siguientes operaciones usando dicha ALU:
+El fichero [`74181.v`](https://juanjo810.github.io/libro_computadores_i/_static/verilog/sesion_09/74181.v) contiene el código Verilog de la ALU 74181 vista en teoría. Escríbase un fichero Verilog con un módulo que realice las siguientes operaciones usando dicha ALU:
 
 1. 7+4
 2. 2+6+1
