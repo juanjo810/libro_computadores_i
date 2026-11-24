@@ -1,6 +1,7 @@
 format: jb-book
-root: es/01_verilog/sesion_00_terminal_ubuntu
+root: es/intro
 chapters:
+  - file: es/01_verilog/sesion_00_terminal_ubuntu
   - file: es/01_verilog/sesion_01_introduccion
   - file: es/01_verilog/sesion_02_operaciones
   - file: es/01_verilog/sesion_03_puertas_logicas
@@ -9,5 +10,4 @@ chapters:
   - file: es/01_verilog/sesion_06_biestables
   - file: es/01_verilog/sesion_07_registros
   - file: es/01_verilog/sesion_08_contadores
-# Contenido oculto temporalmente.
-# - file: es/01_verilog/sesion_09_alu
+  - file: es/01_verilog/sesion_09_alu

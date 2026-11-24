@@ -1,6 +1,7 @@
 format: jb-book
-root: en/01_verilog/session_00_ubuntu_terminal
+root: en/intro
 chapters:
+  - file: en/01_verilog/session_00_ubuntu_terminal
   - file: en/01_verilog/session_01_introduction
   - file: en/01_verilog/session_02_operations
   - file: en/01_verilog/session_03_logic_gates
@@ -9,5 +10,4 @@ chapters:
   - file: en/01_verilog/session_06_flip_flops
   - file: en/01_verilog/session_07_registers
   - file: en/01_verilog/session_08_counters
-# Content temporarily hidden.
-# - file: en/01_verilog/session_09_alu
+  - file: en/01_verilog/session_09_alu

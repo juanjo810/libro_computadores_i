@@ -1,63 +1,104 @@
-# Session 9. ALU
+# Session 9. ALU in Verilog
 
-The final session applies modular work to a 74181 ALU. The route is short but integrative: include an external file, study the interface, and chain operations.
+Ninth and last lab session. We will see how to include other source files in a Verilog program and we will use the 74181 arithmetic logic unit (ALU) seen in the theory lectures to carry out arithmetic and logic operations.
 
 ```{admonition} Learning objectives
 :class: tip
 
-- Use `` `include `` to add an external Verilog module.
-- Prepare tests for arithmetic and logic operations in the 74181 ALU.
-- Store intermediate results when an operation requires several steps.
+- Include a source file inside another one with `` `include ``.
+- Use an existing module, the 74181 ALU, from its diagram and its operation table.
+- Chain several operations by storing the intermediate values in registers.
 ```
 
-## 1. Include source files
+## Including source files
 
-Verilog can insert another file with `` `include ``. In this session it is used to bring in `74181.v` without copying its contents into the test file.
+At any point, we can include another file, which will work just as if we had typed it at that point. The command is `` `include ``. So, to include the file `SumadorAuxiliar.v`, we type:
 
 ```verilog
-`include "74181.v"
+`include "SumadorAuxiliar.v"
 ```
 
-## 2. Read the ALU interface
+## Exercise 1
 
-Before testing operations, inspect the module header and locate inputs, outputs, selection lines, and negated carry lines. {numref}`fig-verilog-en-09-74181` shows the ALU diagram.
+```{admonition} Statement
+:class: note
 
-```{figure} ../../_static/verilog/sesion_09/74181.png
+The file {download}`74181.v <../../_static/verilog/sesion_09/74181.v>` contains the Verilog code of the 74181 ALU seen in the theory lectures. Write a Verilog file with a module that carries out the following operations using that ALU:
+
+1. 7+4
+2. 2+6+1
+3. $0110_2$ AND $1010_2$
+4. $0110_2$ XOR $1010_2$
+5. $0110_2$ OR NOT ($1010_2$ XNOR $0111_2$) (2 operations)
+6. 2*7
+7. 3*5+1 (2 operations)
+```
+
+You can find the original file at <https://github.com/lisper/cpus-caddr/blob/master/rtl/74181.v.orig>.
+
+For multiple operations, registers must be used to store the intermediate values. Let us recall the diagram and the operation table of this integrated circuit:
+
+```{figure} ../../_static/verilog/sesion_09/svg/74181.svg
 ---
 name: fig-verilog-en-09-74181
-alt: Diagram of the 74181 integrated circuit.
-width: 85%
+alt: Diagram of the 74181 ALU. The four-bit operands A and B come in from the top. The four-bit operation select S, mode M and the negated carry in come in from the left. AEB and the negated carry out go out on the right, and the four-bit result F goes out at the bottom.
+class: verilog-svg
+width: 60%
 align: center
 ---
-Diagram of the 74181 integrated circuit.
+Diagram of the 74181.
 ```
 
-## 3. Choose operations from the table
+In the table, the vertical bar ($\mid$) stands for the OR operation, juxtaposition ($AB$) stands for the AND operation and the $+$ sign stands for arithmetic addition.
 
-Use {numref}`fig-verilog-en-09-74181t` to find the combinations needed for additions, logic operations, and compound operations.
+| $S$ | Arithmetic ($M=0$) | Logic ($M=1$) |
+|:---:|:---:|:---:|
+| 0000 | $A + C_n$ | $\overline{A}$ |
+| 0001 | $A \mid B + C_n$ | $\overline{A \mid B}$ |
+| 0010 | $A \mid \overline{B} + C_n$ | $\overline{A}B$ |
+| 0011 | $-1 + C_n$ | $0$ |
+| 0100 | $A + A\overline{B} + C_n$ | $\overline{AB}$ |
+| 0101 | $(A \mid B) + A\overline{B} + C_n$ | $\overline{B}$ |
+| 0110 | $A - B - 1 + C_n$ | $A \oplus B$ |
+| 0111 | $A\overline{B} - 1 + C_n$ | $A\overline{B}$ |
+| 1000 | $A + AB + C_n$ | $\overline{A} \mid B$ |
+| 1001 | $A + B + C_n$ | $\overline{A \oplus B}$ |
+| 1010 | $(A \mid \overline{B}) + AB + C_n$ | $B$ |
+| 1011 | $AB - 1 + C_n$ | $AB$ |
+| 1100 | $A + A + C_n$ | $1$ |
+| 1101 | $(A \mid B) + A + C_n$ | $A \mid \overline{B}$ |
+| 1110 | $(A \mid \overline{B}) + A + C_n$ | $A \mid B$ |
+| 1111 | $A - 1 + C_n$ | $A$ |
 
-```{figure} ../../_static/verilog/sesion_09/74181t.png
----
-name: fig-verilog-en-09-74181t
-alt: Operation table for the 74181 integrated circuit.
-width: 85%
-align: center
----
-Operation table for the 74181 integrated circuit.
+If you look at the module definition:
+
+```verilog
+module Circuit74181 (S, A, B, M, CNb, F, X, Y, CN4b, AEB);
 ```
 
-## 4. Test simple operations
+you will notice that the negated carry lines are `CNb` and `CN4b`, respectively. Lines `X` and `Y` can be left unconnected.
 
-Write a test module for `7+4`, `2+6+1`, AND, XOR, and OR combined with negations. Print inputs, selection, and output in each case.
+| Port | Bits | Line in the diagram |
+|---|:---:|---|
+| `S` | 4 | Operation select $S$. |
+| `A`, `B` | 4 | Operands $A$ and $B$. |
+| `M` | 1 | Mode $M$: arithmetic (0) or logic (1). |
+| `CNb` | 1 | Negated carry in, $\overline{C}_n$. |
+| `F` | 4 | Result $F$. |
+| `X`, `Y` | 1 | Can be left unconnected. |
+| `CN4b` | 1 | Negated carry out, $\overline{C}_{n+4}$. |
+| `AEB` | 1 | Output $AEB$. |
 
-## 5. Chain compound operations
+## Related shell commands
 
-For `2*7` and `3*5+1`, store intermediate results in registers. Every step should correspond to a concrete ALU configuration.
+| Command | What it does |
+|---|---|
+| `ls` | Lists the contents of a directory. |
+| `cd` | Changes the working directory. |
+| `rm` | Deletes a file. |
+| `man` | Shows the manual page of a command. |
+| `cat` | Shows the contents of a file. |
 
-## Closing checkpoint
+## Original source
 
-Before moving to the next session, save the Verilog file for each exercise and write down what you expected and what the simulation actually printed. That comparison is the quickest way to find mistakes.
-
-## Original Source
-
-Content written and expanded from the class presentation and reference page: <http://avellano.usal.es/~compi/sesion9.htm>.
+Content adapted to TeachBook from the reference page <http://avellano.usal.es/~compi/sesion9.htm> (© 2025 Guillermo González Talaván)

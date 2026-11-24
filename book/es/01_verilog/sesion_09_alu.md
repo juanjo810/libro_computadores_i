@@ -1,96 +1,74 @@
-# Sesion 9. ALU
+# Sesión 9. ALU en Verilog
 
-Esta pagina respeta la secuencia de la sesion original: cada apartado aparece en el mismo orden y los ejercicios se mantienen como secciones propias dentro del recorrido.
+Novena y última sesión de prácticas. Veremos cómo incluir otros ficheros fuente en un programa Verilog y usaremos la unidad aritmético-lógica (ALU) 74181 vista en teoría para realizar operaciones aritméticas y lógicas.
 
 ```{admonition} Objetivos de aprendizaje
 :class: tip
 
-- Usar `` `include `` para incorporar un modulo externo.
-- Preparar pruebas para la ALU 74181.
-- Guardar resultados intermedios en operaciones compuestas.
+- Incluir un fichero fuente dentro de otro con `` `include ``.
+- Usar un módulo ya escrito, la ALU 74181, a partir de su esquema y de su tabla de operaciones.
+- Encadenar varias operaciones guardando los valores intermedios en registros.
 ```
 
-## Inclusion de ficheros fuente
-Se puede, en un punto cualquiera, incluir otro fichero que
-funcionará tal y como si lo hubiéramos tecleado en
-dicho punto. La orden es
+## Inclusión de ficheros fuente
 
-`include
+Se puede, en un punto cualquiera, incluir otro fichero que funcionará tal y como si lo hubiéramos tecleado en dicho punto. La orden es `` `include ``. Así, si queremos incluir el fichero `SumadorAuxiliar.v`, tecleamos:
 
-. Así, si
-queremos incluir el fichero
-
-SumadorAuxiliar.v
-
-,
-tecleamos:
-
-```text
+```verilog
 `include "SumadorAuxiliar.v"
 ```
 
 ## Ejercicio 1
-El fichero
 
-74181.v
+```{admonition} Enunciado
+:class: note
 
-contiene el 
-código Verilog
-del ALU 74181 vista en teoría. Podéis encontrar el fichero
-original en la página web del profesor
-
-John P. Hayes
-
-,
-de la Universidad de Michigan
-(
-
-http://www.eecs.umich.edu/~jhayes/iscas.restore/74181.html
-
-).
-Escríbase un
-fichero Verilog con un módulo que realice las siguientes
-operaciones usando dicha ALU:
+El fichero {download}`74181.v <../../_static/verilog/sesion_09/74181.v>` contiene el código Verilog de la ALU 74181 vista en teoría. Escríbase un fichero Verilog con un módulo que realice las siguientes operaciones usando dicha ALU:
 
 1. 7+4
 2. 2+6+1
-3. 0110 ~2~ AND
-1010 ~2~
-4. 0110 ~2~ XOR
-1010 ~2~
-5. 0110 ~2~ OR
-NOT (1010 ~2~ XNOR
-0111 ~2~ ) (2 operaciones)
+3. $0110_2$ AND $1010_2$
+4. $0110_2$ XOR $1010_2$
+5. $0110_2$ OR NOT ($1010_2$ XNOR $0111_2$) (2 operaciones)
 6. 2*7
 7. 3*5+1 (2 operaciones)
+```
 
-En el caso de operaciones múltiples, se deben usar registros
-para almacenar los valores intermedios. Recordemos el esquema y
-la tabla de operaciones de este circuito integrado:
+Podéis encontrar el fichero original en <https://github.com/lisper/cpus-caddr/blob/master/rtl/74181.v.orig>.
 
-La {numref}`fig-verilog-09-74181` reproduce la figura original usada en este punto de la sesion.
+En el caso de operaciones múltiples, se deben usar registros para almacenar los valores intermedios. Recordemos el esquema y la tabla de operaciones de este circuito integrado:
 
-```{figure} ../../_static/verilog/sesion_09/74181.png
+```{figure} ../../_static/verilog/sesion_09/svg/74181.svg
 ---
 name: fig-verilog-09-74181
-alt: Esquema del 74181
-width: 85%
+alt: Esquema de la ALU 74181. Por arriba entran los operandos A y B, de cuatro bits. Por la izquierda entran la selección de operación S, de cuatro bits, el modo M y el acarreo de entrada negado. Por la derecha salen AEB y el acarreo de salida negado, y por abajo sale el resultado F, de cuatro bits.
+class: verilog-svg
+width: 60%
 align: center
 ---
-Esquema del 74181
+Esquema del 74181.
 ```
 
-La {numref}`fig-verilog-09-74181t` reproduce la figura original usada en este punto de la sesion.
+En la tabla, la barra vertical ($\mid$) indica la operación OR, la yuxtaposición ($AB$) indica la operación AND y el signo $+$ indica la suma aritmética.
 
-```{figure} ../../_static/verilog/sesion_09/74181t.png
----
-name: fig-verilog-09-74181t
-alt: Tabla de operaciones del 74181
-width: 85%
-align: center
----
-Tabla de operaciones del 74181
-```
+| $S$ | Aritmético ($M=0$) | Lógico ($M=1$) |
+|:---:|:---:|:---:|
+| 0000 | $A + C_n$ | $\overline{A}$ |
+| 0001 | $A \mid B + C_n$ | $\overline{A \mid B}$ |
+| 0010 | $A \mid \overline{B} + C_n$ | $\overline{A}B$ |
+| 0011 | $-1 + C_n$ | $0$ |
+| 0100 | $A + A\overline{B} + C_n$ | $\overline{AB}$ |
+| 0101 | $(A \mid B) + A\overline{B} + C_n$ | $\overline{B}$ |
+| 0110 | $A - B - 1 + C_n$ | $A \oplus B$ |
+| 0111 | $A\overline{B} - 1 + C_n$ | $A\overline{B}$ |
+| 1000 | $A + AB + C_n$ | $\overline{A} \mid B$ |
+| 1001 | $A + B + C_n$ | $\overline{A \oplus B}$ |
+| 1010 | $(A \mid \overline{B}) + AB + C_n$ | $B$ |
+| 1011 | $AB - 1 + C_n$ | $AB$ |
+| 1100 | $A + A + C_n$ | $1$ |
+| 1101 | $(A \mid B) + A + C_n$ | $A \mid \overline{B}$ |
+| 1110 | $(A \mid \overline{B}) + A + C_n$ | $A \mid B$ |
+| 1111 | $A - 1 + C_n$ | $A$ |
 
 Si observáis la definición del módulo:
 
@@ -98,27 +76,29 @@ Si observáis la definición del módulo:
 module Circuit74181 (S, A, B, M, CNb, F, X, Y, CN4b, AEB);
 ```
 
-os daréis cuenta de que las líneas de acarreo negadas
-son
+os daréis cuenta de que las líneas de acarreo negadas son `CNb` y `CN4b`, respectivamente. Las líneas `X` e `Y` las podéis dejar sin conectar.
 
-CNb
+| Puerto | Bits | Línea del esquema |
+|---|:---:|---|
+| `S` | 4 | Selección de operación $S$. |
+| `A`, `B` | 4 | Operandos $A$ y $B$. |
+| `M` | 1 | Modo $M$: aritmético (0) o lógico (1). |
+| `CNb` | 1 | Acarreo de entrada negado, $\overline{C}_n$. |
+| `F` | 4 | Resultado $F$. |
+| `X`, `Y` | 1 | Se pueden dejar sin conectar. |
+| `CN4b` | 1 | Acarreo de salida negado, $\overline{C}_{n+4}$. |
+| `AEB` | 1 | Salida $AEB$. |
 
-y
+## Órdenes de la shell relacionadas
 
-CN4b
-
-, respectivamente. Las
-líneas
-
-X
-
-e
-
-Y
-
-las podéis
-dejar sin conectar.
+| Orden | Para qué sirve |
+|---|---|
+| `ls` | Lista el contenido de un directorio. |
+| `cd` | Cambia el directorio de trabajo. |
+| `rm` | Borra un fichero. |
+| `man` | Muestra la página de manual de una orden. |
+| `cat` | Muestra el contenido de un fichero. |
 
 ## Fuente original
 
-Contenido adaptado a TeachBook a partir de la pagina de referencia: <http://avellano.usal.es/~compi/sesion9.htm>.
+Contenido adaptado a TeachBook a partir de la página de referencia <http://avellano.usal.es/~compi/sesion9.htm> (© 2025 Guillermo González Talaván)

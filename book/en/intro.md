@@ -16,7 +16,7 @@ By working through this book, you will learn to:
 
 ## How the course is organized
 
-The course is organized into practice sessions. Each session includes a short theoretical explanation, guided exercises, an index connecting theory, practice, and figures, and reference diagrams to keep the circuit being programmed clearly in view.
+The course is organized into practice sessions. Each session includes the Verilog explanations you need, the exercise statements and the reference diagrams and tables, to keep the circuit being programmed clearly in view.
 
 ```{admonition} Recommended workflow
 :class: tip
@@ -24,29 +24,19 @@ The course is organized into practice sessions. Each session includes a short th
 Before writing code, identify the circuit inputs, outputs, and internal signals. Then consult the reference figures, write the Verilog module, and check the simulation. If the result does not match what you expected, return to the figure and review the connections.
 ```
 
-## Session roadmap
+## Session index
 
-```{table} Initial map of the course
-:name: tab-computers-i-map
+| Session | What it covers |
+|---|---|
+| [Session 0. Ubuntu Terminal for Verilog](01_verilog/session_00_ubuntu_terminal.md) | Folders, files, basic editors, and first contact with `iverilog`. |
+| [Session 1. Introduction to Verilog](01_verilog/session_01_introduction.md) | Working environment, basic modules, and screen output. |
+| [Session 2. Bit operations](01_verilog/session_02_operations.md) | Masks, parity, and bit reduction. |
+| [Session 3. Logic Gates in Verilog](01_verilog/session_03_logic_gates.md) | AND, OR, NOT, NAND, NOR, XOR, XNOR, and combinational functions. |
+| [Session 4. Modules in Verilog](01_verilog/session_04_modules.md) | Interfaces, module hierarchy, and comparators. |
+| [Session 5. Routers and adders in Verilog](01_verilog/session_05_routers_and_adders.md) | Tri-state buffers, multiplexers, adders, and gate delays. |
+| [Session 6. Flip-flops in Verilog](01_verilog/session_06_flip_flops.md) | RS and JK flip-flops, clock signal, edges, and `always` blocks. |
+| [Session 7. Registers in Verilog](01_verilog/session_07_registers.md) | Behavioural models, shift registers, and timing diagrams with GTKwave. |
+| [Session 8. Counters in Verilog](01_verilog/session_08_counters.md) | Up/down counters, synchronous counter, and state transitions. |
+| [Session 9. ALU in Verilog](01_verilog/session_09_alu.md) | File inclusion and use of the 74181 ALU. |
 
-| Session | Topic | Main idea |
-|---|---|---|
-| 0 | Ubuntu Terminal for Verilog | Folders, files, basic editors, and first contact with `iverilog` |
-| 1 | Introduction to Verilog | Working environment, basic modules, and screen output |
-| 2 | Bit operations | Masks, parity, and bit reduction |
-| 3 | Logic gates | AND, OR, NOT, NAND, NOR, XOR, XNOR, and combinational functions |
-| 4 | Modules | Interfaces, hierarchy, comparators, and encoders |
-| 5 | Routers and adders | Buses, multiplexers, half adders, and full adders |
-| 6 | Flip-flops | Elementary memory, clock, edges, and asynchronous inputs |
-| 7 | Registers | SISO/SIPO registers and waveform-based debugging |
-| 8 | Counters | Up/down counting and state transitions |
-| 9 | ALU | File inclusion and use of the 74181 ALU |
-```
-
-## Available material
-
-Start with the course preparation session:
-
-- [Session 0. Ubuntu Terminal for Verilog](01_verilog/session_00_ubuntu_terminal.md)
-
-You can switch to the Spanish book from the language selector in the top bar.
+The sessions are meant to be followed in order: each one reuses what was built in the previous ones. You can also switch to the Spanish book from the language selector in the top bar.
