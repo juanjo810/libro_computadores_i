@@ -40,3 +40,11 @@ Before writing code, identify the circuit inputs, outputs, and internal signals.
 | [Session 9. ALU in Verilog](01_verilog/session_09_alu.md) | File inclusion and use of the 74181 ALU. |
 
 The sessions are meant to be followed in order: each one reuses what was built in the previous ones. You can also switch to the Spanish book from the language selector in the top bar.
+
+## Reference source
+
+Practically all the sessions in this book are based on the lab sessions of the web page of the **Computers I** course at the University of Salamanca, written by Guillermo González Talaván:
+
+<http://avellano.usal.es/~compi/>
+
+At the end of sessions 1 to 9 there is a link to the original page their content comes from.

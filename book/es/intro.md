@@ -40,3 +40,11 @@ Antes de escribir código, identifica las entradas, salidas y señales internas 
 | [Sesión 9. ALU en Verilog](01_verilog/sesion_09_alu.md) | Inclusión de ficheros y uso de la ALU 74181. |
 
 Las sesiones están pensadas para seguirse en orden: cada una reutiliza lo construido en las anteriores. También puedes cambiar al libro en inglés desde el selector de idioma de la barra superior.
+
+## Fuente de referencia
+
+Prácticamente todas las sesiones de este libro están basadas en las prácticas de la página web de la asignatura **Computadores I** de la Universidad de Salamanca, elaborada por Guillermo González Talaván:
+
+<http://avellano.usal.es/~compi/>
+
+Al final de las sesiones 1 a 9 se enlaza la página original de la que procede su contenido.
